@@ -53,7 +53,7 @@ class PickerViewController: UIViewController {
         let allPhotosOptions: PHFetchOptions = PHFetchOptions()
         allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
         allImages = PHAsset.fetchAssets(with: allPhotosOptions)
-        allCollectionList = PHCollectionList.fetchTopLevelUserCollections(with: nil)
+//        allCollectionList = PHCollectionList.fetchTopLevelUserCollections(with: nil)
     }
 }
 
