@@ -38,14 +38,18 @@ class ViewController: UIViewController {
     private func setCellSize() {
         guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
         
-        let lineSpacing: CGFloat = flowLayout.minimumLineSpacing
-        let itemSpacing: CGFloat = flowLayout.minimumInteritemSpacing
-            
-        let expectedHorizonCount: Int = 8
+        let expectedHorizonCount: Int = 7
         let expectedVerticalCount: Int = 5
         
-        let width = (collectionView.frame.size.width - lineSpacing) / CGFloat(expectedHorizonCount)
-        let height = (collectionView.frame.size.height - itemSpacing) / CGFloat(expectedVerticalCount)
+        let lineSpacing: CGFloat = flowLayout.minimumLineSpacing
+        let itemSpacing: CGFloat = flowLayout.minimumInteritemSpacing
+        
+        let otherHorizonInset: CGFloat = itemSpacing * CGFloat(expectedHorizonCount - 1)
+        let otherVerticalInset: CGFloat = lineSpacing * CGFloat(expectedVerticalCount - 1)
+        
+        
+        let width = (view.frame.size.width - otherHorizonInset) / CGFloat(expectedHorizonCount)
+        let height = (view.frame.size.height - otherVerticalInset ) / CGFloat(expectedVerticalCount)
         
         flowLayout.itemSize = CGSize(width: width, height: height)
     }
