@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         let lineSpacing: CGFloat = flowLayout.minimumLineSpacing
         let itemSpacing: CGFloat = flowLayout.minimumInteritemSpacing
             
-        let expectedHorizonCount: Int = 7
+        let expectedHorizonCount: Int = 8
         let expectedVerticalCount: Int = 5
         
         let width = (collectionView.frame.size.width - lineSpacing) / CGFloat(expectedHorizonCount)

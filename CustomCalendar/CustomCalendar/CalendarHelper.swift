@@ -65,7 +65,8 @@ class CalendarHelper {
         return calendar.date(from: components) ?? Date()
     }
     
-    public func weekDay(date: Date) -> Int {        let components = calendar.dateComponents([.weekday], from: date)
+    public func weekDay(date: Date) -> Int {
+        let components = calendar.dateComponents([.weekday], from: date)
         
         guard let weekDay = components.weekday else { return 0 }
 
