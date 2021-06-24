@@ -15,7 +15,7 @@
 		463D5B35268206BE001F2C60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 463D5B33268206BE001F2C60 /* LaunchScreen.storyboard */; };
 		463D5B442682FA62001F2C60 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D5B432682FA62001F2C60 /* CalendarCollectionViewCell.swift */; };
 		463D5B4626830664001F2C60 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D5B4526830664001F2C60 /* CalendarHelper.swift */; };
-		463D5B48268378E7001F2C60 /* MonthCalendarGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D5B47268378E7001F2C60 /* MonthCalendarGenerator.swift */; };
+		463D5B48268378E7001F2C60 /* DaySquaresGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D5B47268378E7001F2C60 /* DaySquaresGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		463D5B36268206BE001F2C60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		463D5B432682FA62001F2C60 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		463D5B4526830664001F2C60 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
-		463D5B47268378E7001F2C60 /* MonthCalendarGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCalendarGenerator.swift; sourceTree = "<group>"; };
+		463D5B47268378E7001F2C60 /* DaySquaresGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySquaresGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 				463D5B2C268206BD001F2C60 /* ViewController.swift */,
 				463D5B432682FA62001F2C60 /* CalendarCollectionViewCell.swift */,
 				463D5B4526830664001F2C60 /* CalendarHelper.swift */,
-				463D5B47268378E7001F2C60 /* MonthCalendarGenerator.swift */,
+				463D5B47268378E7001F2C60 /* DaySquaresGenerator.swift */,
 			);
 			path = CustomCalendar;
 			sourceTree = "<group>";
@@ -148,7 +148,7 @@
 			files = (
 				463D5B4626830664001F2C60 /* CalendarHelper.swift in Sources */,
 				463D5B442682FA62001F2C60 /* CalendarCollectionViewCell.swift in Sources */,
-				463D5B48268378E7001F2C60 /* MonthCalendarGenerator.swift in Sources */,
+				463D5B48268378E7001F2C60 /* DaySquaresGenerator.swift in Sources */,
 				463D5B2D268206BD001F2C60 /* ViewController.swift in Sources */,
 				463D5B29268206BD001F2C60 /* AppDelegate.swift in Sources */,
 				463D5B2B268206BD001F2C60 /* SceneDelegate.swift in Sources */,

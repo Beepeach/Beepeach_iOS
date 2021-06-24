@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     // MARK: Properties
     private let cellIdentifier: String = "CalendarCell"
     private var selectedDate = Date()
-    private var totalSquares = [String]()
+    private var totalDaySquares = [String]()
     
     // MARK: @IBOutlet
     @IBOutlet weak var collectionView: UICollectionView!
@@ -21,18 +21,18 @@ class ViewController: UIViewController {
     // MARK: @IBAction
     @IBAction func previousMonth(_ sender: Any) {
         selectedDate = CalendarHelper().minusMonth(date: selectedDate)
-        setMonthView()
+        configMonthCalendar()
     }
     @IBAction func nextMonth(_ sender: Any) {
         selectedDate = CalendarHelper().plusMonth(date: selectedDate)
-        setMonthView()
+        configMonthCalendar()
     }
     
     // ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setCellSize()
-        setMonthView()
+        configMonthCalendar()
     }
     
     private func setCellSize() {
@@ -50,25 +50,10 @@ class ViewController: UIViewController {
         flowLayout.itemSize = CGSize(width: width, height: height)
     }
     
-    private func setMonthView() {
-        totalSquares.removeAll()
+    private func configMonthCalendar() {
+        totalDaySquares.removeAll()
         
-        let daysInMonth = CalendarHelper().daysInMonth(date: selectedDate)
-        let firstDayOfMonth = CalendarHelper().firstOfMonth(date: selectedDate)
-        let startingSpaces = CalendarHelper().weekDay(date: firstDayOfMonth)
-        
-        let maxSquareCount: Int = 42
-        var count: Int = 1
-        
-        while count <= maxSquareCount {
-            if (count <= startingSpaces) || (count - startingSpaces > daysInMonth) {
-                totalSquares.append("")
-            } else {
-                totalSquares.append(String(count - startingSpaces))
-            }
-            
-            count += 1
-        }
+        totalDaySquares = DaySquaresGenerator().create(selectedDate: selectedDate)
         
         monthLabel.text = CalendarHelper().yearString(date: selectedDate) + " " + CalendarHelper().monthString(date: selectedDate)
         
@@ -80,13 +65,13 @@ class ViewController: UIViewController {
 // MARK: - UICollectionViewDataSource
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        totalSquares.count
+        totalDaySquares.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
         
-        cell.dayOfMonth.text = totalSquares[indexPath.item]
+        cell.dayOfMonth.text = totalDaySquares[indexPath.item]
         
         return cell
     }
