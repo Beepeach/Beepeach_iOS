@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4602C42B268ADC4E00F53373 /* CustomCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4602C42A268ADC4E00F53373 /* CustomCalendarTests.swift */; };
 		463D5B29268206BD001F2C60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D5B28268206BD001F2C60 /* AppDelegate.swift */; };
 		463D5B2B268206BD001F2C60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D5B2A268206BD001F2C60 /* SceneDelegate.swift */; };
 		463D5B2D268206BD001F2C60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D5B2C268206BD001F2C60 /* ViewController.swift */; };
@@ -18,7 +19,20 @@
 		463D5B48268378E7001F2C60 /* DaySquaresGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D5B47268378E7001F2C60 /* DaySquaresGenerator.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4602C42D268ADC4E00F53373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 463D5B1D268206BD001F2C60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 463D5B24268206BD001F2C60;
+			remoteInfo = CustomCalendar;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		4602C428268ADC4E00F53373 /* CustomCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4602C42A268ADC4E00F53373 /* CustomCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalendarTests.swift; sourceTree = "<group>"; };
+		4602C42C268ADC4E00F53373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		463D5B25268206BD001F2C60 /* CustomCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		463D5B28268206BD001F2C60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		463D5B2A268206BD001F2C60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +47,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4602C425268ADC4E00F53373 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		463D5B22268206BD001F2C60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,10 +64,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4602C429268ADC4E00F53373 /* CustomCalendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				4602C42A268ADC4E00F53373 /* CustomCalendarTests.swift */,
+				4602C42C268ADC4E00F53373 /* Info.plist */,
+			);
+			path = CustomCalendarTests;
+			sourceTree = "<group>";
+		};
 		463D5B1C268206BD001F2C60 = {
 			isa = PBXGroup;
 			children = (
 				463D5B27268206BD001F2C60 /* CustomCalendar */,
+				4602C429268ADC4E00F53373 /* CustomCalendarTests */,
 				463D5B26268206BD001F2C60 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				463D5B25268206BD001F2C60 /* CustomCalendar.app */,
+				4602C428268ADC4E00F53373 /* CustomCalendarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +111,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4602C427268ADC4E00F53373 /* CustomCalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4602C431268ADC4E00F53373 /* Build configuration list for PBXNativeTarget "CustomCalendarTests" */;
+			buildPhases = (
+				4602C424268ADC4E00F53373 /* Sources */,
+				4602C425268ADC4E00F53373 /* Frameworks */,
+				4602C426268ADC4E00F53373 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4602C42E268ADC4E00F53373 /* PBXTargetDependency */,
+			);
+			name = CustomCalendarTests;
+			productName = CustomCalendarTests;
+			productReference = 4602C428268ADC4E00F53373 /* CustomCalendarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		463D5B24268206BD001F2C60 /* CustomCalendar */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 463D5B39268206BE001F2C60 /* Build configuration list for PBXNativeTarget "CustomCalendar" */;
@@ -105,6 +155,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					4602C427268ADC4E00F53373 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 463D5B24268206BD001F2C60;
+					};
 					463D5B24268206BD001F2C60 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -124,11 +178,19 @@
 			projectRoot = "";
 			targets = (
 				463D5B24268206BD001F2C60 /* CustomCalendar */,
+				4602C427268ADC4E00F53373 /* CustomCalendarTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4602C426268ADC4E00F53373 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		463D5B23268206BD001F2C60 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,6 +204,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4602C424268ADC4E00F53373 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4602C42B268ADC4E00F53373 /* CustomCalendarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		463D5B21268206BD001F2C60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -156,6 +226,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4602C42E268ADC4E00F53373 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 463D5B24268206BD001F2C60 /* CustomCalendar */;
+			targetProxy = 4602C42D268ADC4E00F53373 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		463D5B2E268206BD001F2C60 /* Main.storyboard */ = {
@@ -177,6 +255,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4602C42F268ADC4E00F53373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5RH9MF273;
+				INFOPLIST_FILE = CustomCalendarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.beepeachstudio.CustomCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomCalendar.app/CustomCalendar";
+			};
+			name = Debug;
+		};
+		4602C430268ADC4E00F53373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5RH9MF273;
+				INFOPLIST_FILE = CustomCalendarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.beepeachstudio.CustomCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomCalendar.app/CustomCalendar";
+			};
+			name = Release;
+		};
 		463D5B37268206BE001F2C60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -334,6 +452,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4602C431268ADC4E00F53373 /* Build configuration list for PBXNativeTarget "CustomCalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4602C42F268ADC4E00F53373 /* Debug */,
+				4602C430268ADC4E00F53373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		463D5B20268206BD001F2C60 /* Build configuration list for PBXProject "CustomCalendar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
