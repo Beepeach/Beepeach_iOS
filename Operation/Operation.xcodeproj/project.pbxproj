@@ -14,6 +14,7 @@
 		4602C40C2689AC0300F53373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4602C40B2689AC0300F53373 /* Assets.xcassets */; };
 		4602C40F2689AC0300F53373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4602C40D2689AC0300F53373 /* LaunchScreen.storyboard */; };
 		4602C435268C117500F53373 /* CustomOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4602C434268C117500F53373 /* CustomOperation.swift */; };
+		4602C437268C1CFD00F53373 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4602C436268C1CFD00F53373 /* IndexViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4602C40E2689AC0300F53373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4602C4102689AC0300F53373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4602C434268C117500F53373 /* CustomOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOperation.swift; sourceTree = "<group>"; };
+		4602C436268C1CFD00F53373 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				4602C40B2689AC0300F53373 /* Assets.xcassets */,
 				4602C40D2689AC0300F53373 /* LaunchScreen.storyboard */,
 				4602C4102689AC0300F53373 /* Info.plist */,
+				4602C436268C1CFD00F53373 /* IndexViewController.swift */,
 			);
 			path = Operation;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				4602C4072689AC0100F53373 /* ViewController.swift in Sources */,
 				4602C4032689AC0100F53373 /* AppDelegate.swift in Sources */,
 				4602C4052689AC0100F53373 /* SceneDelegate.swift in Sources */,
+				4602C437268C1CFD00F53373 /* IndexViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
