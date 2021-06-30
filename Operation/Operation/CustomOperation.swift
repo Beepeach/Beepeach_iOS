@@ -16,10 +16,10 @@ class CustomOperation: Operation {
     
     override func main() {
         autoreleasepool {
-            for _ in 1 ... 20 {
+            for _ in 1 ... 10 {
                 guard isCancelled == false else { return }
                 
-                print(work, terminator: "")
+                print(work, terminator: " ")
                 Thread.sleep(forTimeInterval: 1.2)
             }
         }

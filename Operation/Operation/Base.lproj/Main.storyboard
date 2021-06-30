@@ -59,15 +59,37 @@
             </objects>
             <point key="canvasLocation" x="-381.15942028985512" y="136.60714285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Dependancy View Controller-->
         <scene sceneID="O9p-cM-06J">
             <objects>
-                <viewController storyboardIdentifier="Dependency" id="aXs-Bx-ayv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Dependency" id="aXs-Bx-ayv" customClass="DependancyViewController" customModule="Operation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xrO-Zx-PjW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFG-Pd-cxl">
+                                <rect key="frame" x="108.5" y="209" width="197" height="30"/>
+                                <state key="normal" title="Start Dependency Operation"/>
+                                <connections>
+                                    <action selector="start:" destination="aXs-Bx-ayv" eventType="touchUpInside" id="eVb-QH-fOV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SM-Xt-PSZ">
+                                <rect key="frame" x="155" y="433" width="104" height="30"/>
+                                <state key="normal" title="Stop Operation"/>
+                                <connections>
+                                    <action selector="stop:" destination="aXs-Bx-ayv" eventType="touchUpInside" id="ZkY-iS-9JB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Whq-Cg-TSl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4SM-Xt-PSZ" firstAttribute="centerX" secondItem="xrO-Zx-PjW" secondAttribute="centerX" id="8Ff-Vw-FYK"/>
+                            <constraint firstItem="YFG-Pd-cxl" firstAttribute="centerY" secondItem="xrO-Zx-PjW" secondAttribute="centerY" multiplier="0.5" id="jcS-cf-SYW"/>
+                            <constraint firstItem="4SM-Xt-PSZ" firstAttribute="centerY" secondItem="xrO-Zx-PjW" secondAttribute="centerY" id="qit-8a-ojs"/>
+                            <constraint firstItem="YFG-Pd-cxl" firstAttribute="centerX" secondItem="xrO-Zx-PjW" secondAttribute="centerX" id="xyT-uF-kNn"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufS-7F-4QE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
