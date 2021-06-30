@@ -65,7 +65,14 @@ class ViewController: UIViewController {
         
         // block이 끝나면 실행시킬 코드
         block.completionBlock = {
-            print("Done")
+            print("BlockOperation is Done")
+        }
+        
+        // CustomOperation을 추가하는 방법
+        let customOperation: CustomOperation = CustomOperation(work: "🐝")
+        backgroundQueue.addOperation(customOperation)
+        customOperation.completionBlock = {
+            print("CustomOperation is Done")
         }
         
     }

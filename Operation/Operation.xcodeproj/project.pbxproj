@@ -13,6 +13,7 @@
 		4602C40A2689AC0100F53373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4602C4082689AC0100F53373 /* Main.storyboard */; };
 		4602C40C2689AC0300F53373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4602C40B2689AC0300F53373 /* Assets.xcassets */; };
 		4602C40F2689AC0300F53373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4602C40D2689AC0300F53373 /* LaunchScreen.storyboard */; };
+		4602C435268C117500F53373 /* CustomOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4602C434268C117500F53373 /* CustomOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4602C40B2689AC0300F53373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4602C40E2689AC0300F53373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4602C4102689AC0300F53373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4602C434268C117500F53373 /* CustomOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				4602C4022689AC0100F53373 /* AppDelegate.swift */,
 				4602C4042689AC0100F53373 /* SceneDelegate.swift */,
 				4602C4062689AC0100F53373 /* ViewController.swift */,
+				4602C434268C117500F53373 /* CustomOperation.swift */,
 				4602C4082689AC0100F53373 /* Main.storyboard */,
 				4602C40B2689AC0300F53373 /* Assets.xcassets */,
 				4602C40D2689AC0300F53373 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4602C435268C117500F53373 /* CustomOperation.swift in Sources */,
 				4602C4072689AC0100F53373 /* ViewController.swift in Sources */,
 				4602C4032689AC0100F53373 /* AppDelegate.swift in Sources */,
 				4602C4052689AC0100F53373 /* SceneDelegate.swift in Sources */,
