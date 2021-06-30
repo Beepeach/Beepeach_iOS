@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4602C42B268ADC4E00F53373 /* CustomCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4602C42A268ADC4E00F53373 /* CustomCalendarTests.swift */; };
+		4602C433268AF20800F53373 /* CalendarHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4602C432268AF20800F53373 /* CalendarHelperTests.swift */; };
 		463D5B29268206BD001F2C60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D5B28268206BD001F2C60 /* AppDelegate.swift */; };
 		463D5B2B268206BD001F2C60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D5B2A268206BD001F2C60 /* SceneDelegate.swift */; };
 		463D5B2D268206BD001F2C60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D5B2C268206BD001F2C60 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		4602C428268ADC4E00F53373 /* CustomCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4602C42A268ADC4E00F53373 /* CustomCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalendarTests.swift; sourceTree = "<group>"; };
 		4602C42C268ADC4E00F53373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4602C432268AF20800F53373 /* CalendarHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelperTests.swift; sourceTree = "<group>"; };
 		463D5B25268206BD001F2C60 /* CustomCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		463D5B28268206BD001F2C60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		463D5B2A268206BD001F2C60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		4602C429268ADC4E00F53373 /* CustomCalendarTests */ = {
 			isa = PBXGroup;
 			children = (
+				4602C432268AF20800F53373 /* CalendarHelperTests.swift */,
 				4602C42A268ADC4E00F53373 /* CustomCalendarTests.swift */,
 				4602C42C268ADC4E00F53373 /* Info.plist */,
 			);
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4602C42B268ADC4E00F53373 /* CustomCalendarTests.swift in Sources */,
+				4602C433268AF20800F53373 /* CalendarHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
