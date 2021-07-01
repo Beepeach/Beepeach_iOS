@@ -22,5 +22,9 @@ class CalendarHelperTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    
+    func test_calendar_whenAlways_shouldCurrentCalendar() {
+        let userCalendar = sut.getCurrentCalendar()
+
+        XCTAssertEqual(Calendar.current, userCalendar)
+    }
 }

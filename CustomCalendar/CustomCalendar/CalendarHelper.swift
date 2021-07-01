@@ -72,5 +72,9 @@ class CalendarHelper {
 
         return weekDay - 1
     }
+    
+    public func getCurrentCalendar() -> Calendar {
+        return self.calendar
+    }
 }
 
