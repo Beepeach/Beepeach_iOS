@@ -27,4 +27,28 @@ class CalendarHelperTests: XCTestCase {
 
         XCTAssertEqual(Calendar.current, userCalendar)
     }
+    
+    func test_plusMonth_whenIsCalled_shouldPlusOneMonth() {
+        let calendar: Calendar = Calendar.current
+        let beforeDate: Date = Date()
+        let beforeDateMonth: Int = calendar.component(.month, from: beforeDate)
+        
+        let afterDate: Date = sut.plusMonth(date: beforeDate)
+        let afterDateMonth: Int = calendar.component(.month, from: afterDate)
+        
+        XCTAssertEqual(beforeDateMonth + 1, afterDateMonth)
+    }
+    
+    func test_minusMonth_whenIsCalled_shouldMinusOneMonth() {
+        let calendar: Calendar = Calendar.current
+        let beforeDate: Date = Date()
+        let beforeDateMonth: Int = calendar.component(.month, from: beforeDate)
+        
+        let afterDate: Date = sut.minusMonth(date: beforeDate)
+        let afterDateMonth: Int = calendar.component(.month, from: afterDate)
+        
+        XCTAssertEqual(beforeDateMonth - 1, afterDateMonth)
+    }
+    
+    func test_when
 }
