@@ -60,15 +60,17 @@ class CalendarHelper {
         return components.day ?? 0
     }
     
+    // 2021.06.23 -> 2021.06.01
     public func firstOfMonth(date: Date) -> Date {
         let components = calendar.dateComponents([.year, .month], from: date)
         return calendar.date(from: components) ?? Date()
     }
     
+    
     public func weekDay(date: Date) -> Int {
         let components = calendar.dateComponents([.weekday], from: date)
         
-        guard let weekDay = components.weekday else { return 0 }
+        guard let weekDay = components.weekday else { return 1 }
 
         return weekDay - 1
     }

@@ -20,6 +20,8 @@
 		463D5B48268378E7001F2C60 /* DaySquaresGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D5B47268378E7001F2C60 /* DaySquaresGenerator.swift */; };
 		46C4C6A52692BF730098DD64 /* DateCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C4C6A42692BF730098DD64 /* DateCalculatorTests.swift */; };
 		46C4C6A72692C0380098DD64 /* DateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C4C6A62692C0380098DD64 /* DateCalculator.swift */; };
+		46C4C6A92692DE200098DD64 /* DateGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C4C6A82692DE200098DD64 /* DateGeneratorTests.swift */; };
+		46C4C6AB2692DE410098DD64 /* DateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C4C6AA2692DE410098DD64 /* DateGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		463D5B47268378E7001F2C60 /* DaySquaresGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySquaresGenerator.swift; sourceTree = "<group>"; };
 		46C4C6A42692BF730098DD64 /* DateCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculatorTests.swift; sourceTree = "<group>"; };
 		46C4C6A62692C0380098DD64 /* DateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculator.swift; sourceTree = "<group>"; };
+		46C4C6A82692DE200098DD64 /* DateGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateGeneratorTests.swift; sourceTree = "<group>"; };
+		46C4C6AA2692DE410098DD64 /* DateGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 				4602C42A268ADC4E00F53373 /* CustomCalendarTests.swift */,
 				4602C42C268ADC4E00F53373 /* Info.plist */,
 				46C4C6A42692BF730098DD64 /* DateCalculatorTests.swift */,
+				46C4C6A82692DE200098DD64 /* DateGeneratorTests.swift */,
 			);
 			path = CustomCalendarTests;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 				463D5B4526830664001F2C60 /* CalendarHelper.swift */,
 				463D5B47268378E7001F2C60 /* DaySquaresGenerator.swift */,
 				46C4C6A62692C0380098DD64 /* DateCalculator.swift */,
+				46C4C6AA2692DE410098DD64 /* DateGenerator.swift */,
 			);
 			path = CustomCalendar;
 			sourceTree = "<group>";
@@ -220,6 +226,7 @@
 				46C4C6A52692BF730098DD64 /* DateCalculatorTests.swift in Sources */,
 				4602C42B268ADC4E00F53373 /* CustomCalendarTests.swift in Sources */,
 				4602C433268AF20800F53373 /* CalendarHelperTests.swift in Sources */,
+				46C4C6A92692DE200098DD64 /* DateGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +237,7 @@
 				463D5B4626830664001F2C60 /* CalendarHelper.swift in Sources */,
 				463D5B442682FA62001F2C60 /* CalendarCollectionViewCell.swift in Sources */,
 				463D5B48268378E7001F2C60 /* DaySquaresGenerator.swift in Sources */,
+				46C4C6AB2692DE410098DD64 /* DateGenerator.swift in Sources */,
 				463D5B2D268206BD001F2C60 /* ViewController.swift in Sources */,
 				463D5B29268206BD001F2C60 /* AppDelegate.swift in Sources */,
 				463D5B2B268206BD001F2C60 /* SceneDelegate.swift in Sources */,
