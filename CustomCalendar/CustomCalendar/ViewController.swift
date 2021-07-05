@@ -84,8 +84,7 @@ extension ViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
-        
-        
+        print(selectedDate)
+        print(totalDaySquares[indexPath.item])
     }
 }

@@ -49,6 +49,4 @@ class CalendarHelperTests: XCTestCase {
         
         XCTAssertEqual(beforeDateMonth - 1, afterDateMonth)
     }
-    
-    func test_when
 }
