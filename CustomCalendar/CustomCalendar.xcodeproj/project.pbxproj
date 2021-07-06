@@ -22,6 +22,7 @@
 		46C4C6A72692C0380098DD64 /* DateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C4C6A62692C0380098DD64 /* DateCalculator.swift */; };
 		46C4C6A92692DE200098DD64 /* DateGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C4C6A82692DE200098DD64 /* DateGeneratorTests.swift */; };
 		46C4C6AB2692DE410098DD64 /* DateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C4C6AA2692DE410098DD64 /* DateGenerator.swift */; };
+		46C4C6AD2692FE5F0098DD64 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C4C6AC2692FE5F0098DD64 /* ViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		46C4C6A62692C0380098DD64 /* DateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculator.swift; sourceTree = "<group>"; };
 		46C4C6A82692DE200098DD64 /* DateGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateGeneratorTests.swift; sourceTree = "<group>"; };
 		46C4C6AA2692DE410098DD64 /* DateGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateGenerator.swift; sourceTree = "<group>"; };
+		46C4C6AC2692FE5F0098DD64 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				4602C42C268ADC4E00F53373 /* Info.plist */,
 				46C4C6A42692BF730098DD64 /* DateCalculatorTests.swift */,
 				46C4C6A82692DE200098DD64 /* DateGeneratorTests.swift */,
+				46C4C6AC2692FE5F0098DD64 /* ViewControllerTests.swift */,
 			);
 			path = CustomCalendarTests;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46C4C6AD2692FE5F0098DD64 /* ViewControllerTests.swift in Sources */,
 				46C4C6A52692BF730098DD64 /* DateCalculatorTests.swift in Sources */,
 				4602C42B268ADC4E00F53373 /* CustomCalendarTests.swift in Sources */,
 				4602C433268AF20800F53373 /* CalendarHelperTests.swift in Sources */,

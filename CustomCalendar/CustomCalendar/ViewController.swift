@@ -11,8 +11,8 @@ class ViewController: UIViewController {
     
     // MARK: Properties
     private let cellIdentifier: String = "CalendarCell"
-    private var selectedDate = Date()
-    private var totalDaySquares = [String]()
+    private var selectedDate: Date = Date()
+    private var totalDaySquares: [String] = []
     
     // MARK: @IBOutlet
     @IBOutlet weak var collectionView: UICollectionView!
@@ -63,6 +63,10 @@ class ViewController: UIViewController {
         
         collectionView.reloadData()
     }
+    
+    public func getSelectedDate() -> Date {
+        return self.selectedDate
+    }
 }
 
 
@@ -86,5 +90,7 @@ extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(selectedDate)
         print(totalDaySquares[indexPath.item])
+        
+        
     }
 }
