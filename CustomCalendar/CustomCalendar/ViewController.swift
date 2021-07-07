@@ -67,6 +67,10 @@ class ViewController: UIViewController {
     public func getSelectedDate() -> Date {
         return self.selectedDate
     }
+    
+    public func setSelectedDate(date: Date) {
+        self.selectedDate = date
+    }
 }
 
 
@@ -87,6 +91,14 @@ extension ViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if totalDaySquares[indexPath.row] == "" {
+            return false
+        }
+        
+        return true
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(selectedDate)
         print(totalDaySquares[indexPath.item])
