@@ -61,21 +61,41 @@ class ViewControllerTests: XCTestCase {
         XCTAssertTrue(sut.collectionView.delegate === sut)
     }
     
-    // TODO: seletectDate에 따라 IndexPath(0, 0)가 무조건 비는게 아니라서 그게 문제
-    func test_NoDateCollectionViewItem_whenTap_shouldNotSelected() {
+    private func givenSelectedDateAt20210601() -> Date {
+        let date: Date = Calendar.current.date(from: DateComponents(year: 2021, month: 6, day: 1))!
+        
+        return date
+    }
+    
+    func test_DateCollectionViewItem_whenTapWithNoDate_shouldNotSelected() {
+        let date: Date = givenSelectedDateAt20210601()
+        sut.setSelectedDate(date: date)
+        
         let indexPath: IndexPath = IndexPath(item: 0, section: 0)
         
         XCTAssertFalse(sut.collectionView.delegate!.collectionView!(sut.collectionView, shouldSelectItemAt: indexPath))
     }
     
+    func test_DateCollectionViewItem_whenTapWithDate_shouldSelected() {
+        let date: Date = givenSelectedDateAt20210601()
+        sut.setSelectedDate(date: date)
+        
+        let indexPath: IndexPath = IndexPath(item: 5, section: 0)
+        
+        XCTAssertTrue(sut.collectionView.delegate!.collectionView!(sut.collectionView, shouldSelectItemAt: indexPath))
+    }
     
-    func test_collectionViewItem_whenDidSelectItemAt_shouldReturnSelectedDate() {
+    
+    func test_collectionViewItem_whenCreate_shouldAssignCollectDate() {
         // Delegate는 어떻게 테스트를 해야할까??? 이렇게 하나만 테스트해도 괜찮은걸까?
-//        let date: Date = Calendar.current.date(from: DateComponents(year: 2021, month: 6))!
-//        sut.setSelectedDate(date: date)
-//        let indexPath: IndexPath = IndexPath(item: 2, section: 0)
-//
-//        sut.collectionView.delegate?.collectionView?(sut.collectionView, didSelectItemAt: indexPath)
+        let date: Date = givenSelectedDateAt20210601()
+        sut.setSelectedDate(date: date)
+        
+        let indexPath: IndexPath = IndexPath(item: 2, section: 0)
+        
+        let cell = sut.collectionView.dataSource?.collectionView(sut.collectionView, cellForItemAt: indexPath) as! CalendarCollectionViewCell
+     
+        XCTAssertEqual(date, cell.getDate())
     }
     
 }

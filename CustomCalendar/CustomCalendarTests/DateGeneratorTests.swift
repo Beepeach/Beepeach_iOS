@@ -28,7 +28,7 @@ class DateGeneratorTests: XCTestCase {
         let components: DateComponents = DateComponents(year: year, month: month, day: day)
         let expectedDate: Date = Calendar.current.date(from: components)!
         
-        let date: Date = sut.create(year: year, month: month, day: day)
+        let date: Date = sut.createStartOfDay(year: year, month: month, day: day)
         
         XCTAssertEqual(expectedDate, date)
     }

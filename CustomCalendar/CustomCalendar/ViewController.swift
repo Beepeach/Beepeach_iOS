@@ -71,6 +71,18 @@ class ViewController: UIViewController {
     public func setSelectedDate(date: Date) {
         self.selectedDate = date
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let sender = sender as? UICollectionViewCell else { return }
+        
+        guard let destinationNav = segue.destination as? UINavigationController else { return }
+        guard let destinationVC = destinationNav.children.first as? DetailDateViewController else { return }
+        
+        guard let indexpath = collectionView.indexPath(for: sender) else { return }
+        guard let targetCell = collectionView.cellForItem(at: indexpath) as? CalendarCollectionViewCell else { return }
+        
+        destinationVC.date = targetCell.getDate()
+    }
 }
 
 
@@ -83,6 +95,16 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
         
+        guard let year: Int = DateCalculator().extractYearComponent(date: selectedDate).year,
+              let month: Int = DateCalculator().extractMonthComponent(date: selectedDate).month else {
+            return CalendarCollectionViewCell()
+        }
+        
+        if let day: Int = Int(totalDaySquares[indexPath.item]) {
+            let date: Date = DateGenerator().createStartOfDay(year: year, month: month, day: day)
+            cell.setDate(date: date)
+        }
+    
         cell.dayOfMonth.text = totalDaySquares[indexPath.item]
         
         return cell
@@ -97,12 +119,5 @@ extension ViewController: UICollectionViewDelegate {
         }
         
         return true
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(selectedDate)
-        print(totalDaySquares[indexPath.item])
-        
-        
     }
 }

@@ -22,8 +22,22 @@ class DateCalculatorTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func test_method_shouldReturnCalendarMonthComponent() {
+    private func givenReferenceDate() -> Date {
         let date: Date = Date(timeIntervalSinceReferenceDate: 0)
+        
+        return date
+    }
+    
+    func test_method_shouldReturnCalendarYearComponent() {
+        let date = givenReferenceDate()
+        
+        let yearComponent: DateComponents = sut.extractYearComponent(date: date)
+        
+        XCTAssertEqual(yearComponent.year, 2001)
+    }
+    
+    func test_method_shouldReturnCalendarMonthComponent() {
+        let date: Date = givenReferenceDate()
         
         let monthComponent: DateComponents = sut.extractMonthComponent(date: date)
         

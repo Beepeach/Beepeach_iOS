@@ -158,10 +158,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Date View Controller-->
         <scene sceneID="N4k-Wf-vQm">
             <objects>
-                <viewController id="aF6-LH-IzY" sceneMemberID="viewController">
+                <viewController id="aF6-LH-IzY" customClass="DetailDateViewController" customModule="CustomCalendar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3tc-LJ-eeD">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,7 +190,13 @@
                             <constraint firstAttribute="bottom" secondItem="Ajw-iI-6bT" secondAttribute="bottom" id="nCO-xM-p6i"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="CLp-6O-F37"/>
+                    <navigationItem key="navigationItem" id="CLp-6O-F37">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.backward" catalog="system" id="AiM-hy-QAm">
+                            <connections>
+                                <action selector="cancel:" destination="aF6-LH-IzY" id="4Ix-bp-g7H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5K-7u-7jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -232,6 +238,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="arrowshape.turn.up.left.circle" catalog="system" width="128" height="121"/>
         <image name="arrowshape.turn.up.right.circle" catalog="system" width="128" height="121"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
