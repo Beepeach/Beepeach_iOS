@@ -16,28 +16,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLQ-A8-ZPL">
-                                <rect key="frame" x="113" y="175" width="211" height="203"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLQ-A8-ZPL">
+                                <rect key="frame" x="101.5" y="296.5" width="211" height="203"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" image="button_play"/>
-                                <buttonConfiguration key="configuration" style="plain" image="button_play" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="button_play"/>
+                                <connections>
+                                    <action selector="touchUpPlayPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fxE-6V-wNf"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVi-Zi-Cfd">
-                                <rect key="frame" x="186" y="473" width="64" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jvf-8B-E3p">
+                                <rect key="frame" x="8" y="556.5" width="398" height="31"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <color key="thumbTintColor" systemColor="systemGreenColor"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bf4-o0-26D"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVi-Zi-Cfd">
+                                <rect key="frame" x="175" y="519.5" width="64" height="17"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jvf-8B-E3p">
-                                <rect key="frame" x="35" y="547" width="361" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemRedColor"/>
-                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZVi-Zi-Cfd" firstAttribute="top" secondItem="eLQ-A8-ZPL" secondAttribute="bottom" constant="20" id="2L4-H6-gh8"/>
+                            <constraint firstItem="eLQ-A8-ZPL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2bz-fy-Xhv"/>
+                            <constraint firstItem="eLQ-A8-ZPL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="BVb-cK-QBR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jvf-8B-E3p" secondAttribute="trailing" constant="10" id="TAj-f8-58p"/>
+                            <constraint firstItem="jvf-8B-E3p" firstAttribute="top" secondItem="ZVi-Zi-Cfd" secondAttribute="bottom" constant="20" id="fnc-dK-Vdu"/>
+                            <constraint firstItem="jvf-8B-E3p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="hxM-DL-lxN"/>
+                            <constraint firstItem="ZVi-Zi-Cfd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r82-Z7-Fgt"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="playPauseButton" destination="eLQ-A8-ZPL" id="Csq-8C-e0R"/>
@@ -54,6 +67,9 @@
         <image name="button_play" width="187" height="189"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
