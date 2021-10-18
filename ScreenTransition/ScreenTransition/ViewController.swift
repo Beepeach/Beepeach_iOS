@@ -8,17 +8,33 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
     // MARK: @IBAction
     @IBAction func tapCodePushButton(_ sender: UIButton) {
-        guard let viewController: UIViewController = self.storyboard?.instantiateViewController(withIdentifier: "CodePushViewController") else { return }
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "CodePushViewController") as? CodePushViewController else { return }
+        
+        viewController.name = "Beepeach"
+        
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     @IBAction func tapCodePresentButton(_ sender: UIButton) {
-        guard let viewController: UIViewController = self.storyboard?.instantiateViewController(withIdentifier: "CodePresentViewController") else { return }
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "CodePresentViewController") as? CodePresentViewController else { return }
+        
+        viewController.name = "Peach"
+        
+        viewController.delegate = self
         
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(#function)
+        guard let viewController = segue.destination as? SeguePushViewController else { return }
+        viewController.name = "Segue Beepeach"
     }
     
     
@@ -49,3 +65,10 @@ class ViewController: UIViewController {
     }
 }
 
+
+extension ViewController: SendDataDelegate {
+    func sendData(name: String) {
+        self.nameLabel.text = name
+        self.nameLabel.sizeToFit()
+    }
+}

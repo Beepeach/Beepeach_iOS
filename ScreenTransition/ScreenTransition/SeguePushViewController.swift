@@ -8,6 +8,9 @@
 import UIKit
 
 class SeguePushViewController: UIViewController {
+    var name: String?
+    
+    @IBOutlet weak var nameLabel: UILabel!
     
     @IBAction func tapBack(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
@@ -19,6 +22,10 @@ class SeguePushViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("SeguePushViewController", #function)
+        
+        if let name = name {
+            self.nameLabel.text = name
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
