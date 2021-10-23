@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrz-9G-sPr">
+                                <rect key="frame" x="0.0" y="348" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="UqP-I0-xku"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R43-Ib-Tic">
+                                <rect key="frame" x="20" y="648" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="report"/>
+                                <connections>
+                                    <action selector="reportButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jJ6-I6-dNE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qci-gR-IF7">
+                                <rect key="frame" x="20" y="731" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Shuffle"/>
+                                <connections>
+                                    <action selector="Shuffle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L1Y-VW-cU3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5R-3x-NTd">
+                                <rect key="frame" x="20" y="144" width="374" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nrz-9G-sPr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2ea-WY-vVd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qci-gR-IF7" secondAttribute="trailing" constant="20" id="3em-iR-sgu"/>
+                            <constraint firstItem="qci-gR-IF7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6M7-RB-42p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5R-3x-NTd" secondAttribute="trailing" constant="20" id="E7z-Fd-rY7"/>
+                            <constraint firstItem="qci-gR-IF7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="R43-Ib-Tic" secondAttribute="bottom" constant="10" id="F7x-HE-lU2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qci-gR-IF7" secondAttribute="bottom" constant="100" id="J6T-aq-f4j"/>
+                            <constraint firstItem="R43-Ib-Tic" firstAttribute="top" secondItem="nrz-9G-sPr" secondAttribute="bottom" constant="100" id="TgS-g5-t8B"/>
+                            <constraint firstItem="nrz-9G-sPr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UN4-3G-ifL"/>
+                            <constraint firstItem="R43-Ib-Tic" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Yce-Hk-DxU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R43-Ib-Tic" secondAttribute="trailing" constant="20" id="ZsT-tw-rAs"/>
+                            <constraint firstItem="f5R-3x-NTd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aw9-ku-ncM"/>
+                            <constraint firstItem="nrz-9G-sPr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cso-iv-fET"/>
+                            <constraint firstItem="f5R-3x-NTd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="w8d-V6-TcW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mixedNameLabel" destination="f5R-3x-NTd" id="1hR-E1-7EV"/>
+                        <outlet property="picker" destination="nrz-9G-sPr" id="mmj-ab-9g5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
