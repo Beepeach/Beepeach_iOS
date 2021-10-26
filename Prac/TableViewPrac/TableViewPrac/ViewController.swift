@@ -78,6 +78,13 @@ extension ViewController: UITableViewDataSource {
             let text: String = indexPath.section == 0 ? names[indexPath.row] : alphabet[indexPath.row]
             cell.textLabel?.text = text
             
+            // Reusing 체크
+            if indexPath.row == 1 {
+                cell.backgroundColor = .red
+            } else {
+                cell.backgroundColor = .white
+            }
+            
             return cell
         } else {
             guard let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: self.customCellIdentifier, for: indexPath) as? CustomTableViewCell else {
