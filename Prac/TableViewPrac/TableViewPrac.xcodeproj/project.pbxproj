@@ -17,6 +17,7 @@
 		EEE7E8242727C4B8005C40EF /* TableViewPracUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE7E8232727C4B8005C40EF /* TableViewPracUITests.swift */; };
 		EEE7E8262727C4B8005C40EF /* TableViewPracUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE7E8252727C4B8005C40EF /* TableViewPracUITestsLaunchTests.swift */; };
 		EEE7E8332727CEA2005C40EF /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE7E8322727CEA2005C40EF /* CustomTableViewCell.swift */; };
+		EEE7E8352727DC36005C40EF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE7E8342727DC36005C40EF /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		EEE7E8232727C4B8005C40EF /* TableViewPracUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewPracUITests.swift; sourceTree = "<group>"; };
 		EEE7E8252727C4B8005C40EF /* TableViewPracUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewPracUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EEE7E8322727CEA2005C40EF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		EEE7E8342727DC36005C40EF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				EEE7E8042727C4B5005C40EF /* SceneDelegate.swift */,
 				EEE7E8062727C4B5005C40EF /* ViewController.swift */,
 				EEE7E8322727CEA2005C40EF /* CustomTableViewCell.swift */,
+				EEE7E8342727DC36005C40EF /* SecondViewController.swift */,
 				EEE7E8082727C4B5005C40EF /* Main.storyboard */,
 				EEE7E80B2727C4B7005C40EF /* Assets.xcassets */,
 				EEE7E80D2727C4B7005C40EF /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 				EEE7E8072727C4B5005C40EF /* ViewController.swift in Sources */,
 				EEE7E8032727C4B5005C40EF /* AppDelegate.swift in Sources */,
 				EEE7E8332727CEA2005C40EF /* CustomTableViewCell.swift in Sources */,
+				EEE7E8352727DC36005C40EF /* SecondViewController.swift in Sources */,
 				EEE7E8052727C4B5005C40EF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

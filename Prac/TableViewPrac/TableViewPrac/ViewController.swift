@@ -49,6 +49,20 @@ class ViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
+    
+    
+    // MARK: Navagation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nextVC: SecondViewController = segue.destination as? SecondViewController else {
+            return
+        }
+        
+        guard let cell: UITableViewCell = sender as? UITableViewCell else {
+            return
+        }
+        
+        nextVC.text = cell.textLabel?.text
+    }
 }
 
 
