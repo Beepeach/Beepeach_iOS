@@ -17,6 +17,11 @@ class ViewController: UIViewController {
     // MARK: @IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: @IBAction
+    @IBAction func touchUpRefreshButton(_ sender: UIBarButtonItem) {
+        self.tableView.reloadSections(IndexSet(0...0), with: .automatic)
+    }
+    
     // MARK: CustomFunction
     func requestCollection() {
         let cameraRoll: PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: nil)
