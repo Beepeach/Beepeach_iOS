@@ -9,12 +9,15 @@ import UIKit
 import Photos
 
 class ViewController: UIViewController {
+    // MARK: Properties
     let cellIdentifier: String = "cell"
     var fetchResult: PHFetchResult<PHAsset>!
     let imageManager: PHCachingImageManager = PHCachingImageManager()
     
+    // MARK: @IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: CustomFunction
     func requestCollection() {
         let cameraRoll: PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumUserLibrary, options: nil)
         
@@ -27,6 +30,7 @@ class ViewController: UIViewController {
         self.fetchResult = PHAsset.fetchAssets(in: cameraRollColletion, options: fetchOptions)
     }
     
+    // MARK: ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
@@ -66,9 +70,25 @@ class ViewController: UIViewController {
         
         PHPhotoLibrary.shared().register(self)
     }
+    
+    // MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nextVC: ImageZoomViewController = segue.destination as? ImageZoomViewController else {
+            return
+        }
+        
+        guard let cell: UITableViewCell = sender as? UITableViewCell else { return }
+        
+        guard let index: IndexPath = tableView.indexPath(for: cell) else {
+            return
+        }
+        
+        nextVC.asset = self.fetchResult[index.row]
+    }
 }
 
 
+// MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.fetchResult?.count ?? 0
@@ -88,6 +108,7 @@ extension ViewController: UITableViewDataSource {
 }
 
 
+// MARK: - UITableViewDelegate
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -105,6 +126,7 @@ extension ViewController: UITableViewDelegate {
 }
 
 
+// MARK: - PHPhotoLibraryChangeObserver
 extension ViewController: PHPhotoLibraryChangeObserver {
     func photoLibraryDidChange(_ changeInstance: PHChange) {
         guard let changes = changeInstance.changeDetails(for: fetchResult) else {
