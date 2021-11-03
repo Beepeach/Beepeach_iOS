@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     private func saveDiaryList() {
         let date = self.diaryList.map {
             [
+                "uuidString": $0.uuidString,
                 "title": $0.title,
                 "contents": $0.contents,
                 "date": $0.date,
@@ -30,7 +31,6 @@ class ViewController: UIViewController {
         userDefaults.set(date, forKey: "diaryList")
     }
 
-    
     // MARK: @IBOutlet
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -46,6 +46,18 @@ class ViewController: UIViewController {
             name: NSNotification.Name.init(rawValue: "editDiary"),
             object: nil
         )
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(starDiaryNotification(_:)),
+            name: NSNotification.Name("starDiary"),
+            object: nil)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(deleteDiaryNotification(_:)),
+            name: NSNotification.Name("deleteDiary"),
+            object: nil)
     }
     
     private func configureCollectionView() {
@@ -59,6 +71,9 @@ class ViewController: UIViewController {
         let userDefaults = UserDefaults.standard
         guard let data = userDefaults.object(forKey: "diaryList") as? [[String: Any]] else { return }
         self.diaryList = data.compactMap {
+            guard let uuidString = $0["uuidString"] as? String else {
+                return nil
+            }
             guard let title = $0["title"] as? String else {
                 return nil
             }
@@ -72,7 +87,7 @@ class ViewController: UIViewController {
                 return nil
             }
             
-            return Diary(title: title, contents: contents, date: date, isStar: isStar)
+            return Diary(uuidString: uuidString, title: title, contents: contents, date: date, isStar: isStar)
         }
         
         self.diaryList = self.diaryList.sorted(by: {
@@ -84,14 +99,44 @@ class ViewController: UIViewController {
         guard let diary: Diary = noti.object as? Diary else {
             return
         }
-        guard let item = noti.userInfo?["indexPath.item"] as? Int else { return
+        guard let index = self.diaryList.firstIndex(where: { $0.uuidString == diary.uuidString }) else {
+            return
         }
-        self.diaryList[item] = diary
+        self.diaryList[index] = diary
         self.diaryList = self.diaryList.sorted(by: {
             $0.date.compare($1.date) == .orderedDescending
         })
         
         self.collectionView.reloadData()
+    }
+    
+    @objc private func starDiaryNotification(_ noti: Notification) {
+        guard let starDiary = noti.object as? [String: Any] else {
+            return
+        }
+        guard let isStar = starDiary["isStar"] as? Bool else {
+            return
+        }
+        guard let uuidString = starDiary["uuidString"] as? String else {
+            return
+        }
+        guard let index = self.diaryList.firstIndex(where: { $0.uuidString == uuidString }) else {
+            return
+        }
+        
+        self.diaryList[index].isStar = isStar
+    }
+    
+    @objc private func deleteDiaryNotification(_ noti: Notification) {
+        guard let uuidString = noti.object as? String else {
+            return
+        }
+        guard let index = self.diaryList.firstIndex(where: { $0.uuidString == uuidString }) else {
+            return
+        }
+        
+        self.diaryList.remove(at: index)
+        self.collectionView.deleteItems(at: [IndexPath(item: index, section: 0)])
     }
     
     // MARK: Navigation
@@ -136,7 +181,7 @@ extension ViewController: UICollectionViewDataSource {
     
     private func dateToString(date: Date) -> String {
         let formatter: DateFormatter = DateFormatter()
-        formatter.dateFormat = "yy년 MM월 dd일(EEEE)"
+        formatter.dateFormat = "yy년 MM월 dd일(EEEEE)"
         formatter.locale = Locale(identifier: "ko_kr")
         
         return formatter.string(from: date)
@@ -162,16 +207,6 @@ extension ViewController: UICollectionViewDelegate {
         let diary: Diary = self.diaryList[indexPath.item]
         detailDiaryVC.diary = diary
         detailDiaryVC.indexPath = indexPath
-        detailDiaryVC.delegate = self
         self.navigationController?.pushViewController(detailDiaryVC, animated: true)
-    }
-}
-
-
-// MARK: - DetailDiaryViewDelegate
-extension ViewController: DetailDiaryViewDelegate {
-    func didSelectDelete(indexPath: IndexPath) {
-        self.diaryList.remove(at: indexPath.item)
-        self.collectionView.deleteItems(at: [indexPath])
     }
 }

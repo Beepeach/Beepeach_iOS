@@ -7,19 +7,13 @@
 
 import UIKit
 
-// MARK: - DetailDiaryViewDelegate
-protocol DetailDiaryViewDelegate: AnyObject {
-    func didSelectDelete(indexPath: IndexPath)
-}
-
-// MARK: - DetailDiaryViewController
 class DetailDiaryViewController: UIViewController {
     // MARK: Properties
     var diary: Diary?
     var indexPath: IndexPath?
-    weak var delegate: DetailDiaryViewDelegate?
     let writeDiaryVCIndentifier: String = "WriteDiaryViewController"
-
+    var starButton: UIBarButtonItem?
+    
     // MARK: @IBOutlet
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentsTextView: UITextView!
@@ -53,22 +47,21 @@ class DetailDiaryViewController: UIViewController {
         guard let diary = noti.object as? Diary else {
             return
         }
-        /*
-        guard let item = noti.userInfo?["indexPath.item"] as? Int else {
-            return
-        }
-        */
         
         self.diary = diary
         self.configureView()
     }
     
     @IBAction func tapDelete(_ sender: UIButton) {
-        guard let indexPath = self.indexPath else {
+        guard let uuidString = self.diary?.uuidString else {
             return
         }
         
-        self.delegate?.didSelectDelete(indexPath: indexPath)
+        NotificationCenter.default.post(
+            name: NSNotification.Name("deleteDiary"),
+            object: uuidString,
+            userInfo: nil
+        )
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -76,6 +69,13 @@ class DetailDiaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureView()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(starDiaryNotification(_:)),
+            name: NSNotification.Name("starDiary"),
+            object: nil
+        )
     }
     
     private func configureView() {
@@ -83,6 +83,11 @@ class DetailDiaryViewController: UIViewController {
         self.titleLabel.text = diary.title
         self.contentsTextView.text = diary.contents
         self.dateLabel.text = self.dateToString(date: diary.date)
+        
+        self.starButton = UIBarButtonItem(image: nil, style: .plain, target: self, action: #selector(tapStarButton))
+        self.starButton?.image = diary.isStar ? UIImage(systemName: "star.fill") : UIImage(systemName: "star")
+        self.starButton?.tintColor = .orange
+        self.navigationItem.rightBarButtonItem = self.starButton
     }
     
     private func dateToString(date: Date) -> String {
@@ -93,6 +98,47 @@ class DetailDiaryViewController: UIViewController {
         return formatter.string(from: date)
     }
     
+    @objc private func tapStarButton() {
+        guard let isStar = self.diary?.isStar else {
+            return
+        }
+        
+        if isStar {
+            self.starButton?.image = UIImage(systemName: "star")
+        } else {
+            self.starButton?.image = UIImage(systemName: "star.fill")
+        }
+        self.diary?.isStar = !isStar
+        
+        NotificationCenter.default.post(
+            name: NSNotification.Name("starDiary"),
+            object: [
+                "diary": self.diary,
+                "isStar": self.diary?.isStar ?? false,
+                "uuidString": diary?.uuidString
+            ],
+            userInfo: nil)
+    }
+    
+    @objc private func starDiaryNotification(_ noti: Notification) {
+        guard let starDiary = noti.object as? [String: Any] else {
+            return
+        }
+        guard let isStar = starDiary["isStar"] as? Bool else {
+            return
+        }
+        guard let uuidString = starDiary["uuidString"] as? String else {
+            return
+        }
+        guard let diary = self.diary else {
+            return
+        }
+        
+        if diary.uuidString == uuidString {
+            self.diary?.isStar = isStar
+            self.configureView()
+        }
+    }
     
     // MARK: Deinitializer
     deinit {
