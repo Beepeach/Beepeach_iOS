@@ -7,9 +7,13 @@
 
 import UIKit
 
-// MARK: - WriteDiaryViewDelegate
 protocol WriteDiaryViewDelegate: AnyObject {
     func didSelectRegister(diary: Diary)
+}
+
+enum DiaryEditorMode {
+    case new
+    case edit(IndexPath, Diary)
 }
 
 // MARK: - WriteDiaryViewController
@@ -18,6 +22,7 @@ class WriteDiaryViewController: UIViewController {
     private let datePicker: UIDatePicker = UIDatePicker()
     private var diaryDate: Date?
     public weak var delegate: WriteDiaryViewDelegate?
+    public var diaryEditorMode: DiaryEditorMode = .new
 
     // MARK: @IBOutlet
     @IBOutlet weak var titleTextField: UITextField!
@@ -32,7 +37,16 @@ class WriteDiaryViewController: UIViewController {
         guard let date = self.diaryDate else { return }
         
         let diary: Diary = Diary(title: title, contents: contents, date: date, isStar: false)
-        self.delegate?.didSelectRegister(diary: diary)
+        
+        switch self.diaryEditorMode {
+        case .new:
+            self.delegate?.didSelectRegister(diary: diary)
+            
+        case let .edit(indexPath, _):
+            NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "editDiary"), object: diary, userInfo: ["indexPath.item": indexPath.item])
+            
+        }
+        
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -42,6 +56,7 @@ class WriteDiaryViewController: UIViewController {
         self.configureContentsTextView()
         self.configureDatePicker()
         self.configureInputField()
+        self.configureEditMode()
         
         self.confirmButton.isEnabled = false
     }
@@ -83,6 +98,28 @@ class WriteDiaryViewController: UIViewController {
     
     @objc private func dateTextFieldDidChange(_ textField: UITextField) {
         self.validateInputField()
+    }
+    
+    private func configureEditMode() {
+        switch self.diaryEditorMode {
+        case let .edit(_, diary):
+            self.titleTextField.text = diary.title
+            self.contentsTextView.text = diary.contents
+            self.dateTextField.text = self.dateToString(date: diary.date)
+            self.diaryDate = diary.date
+            self.confirmButton.title = "수정"
+            
+        default:
+            break
+        }
+    }
+    
+    private func dateToString(date: Date) -> String {
+        let formatter: DateFormatter = DateFormatter()
+        formatter.dateFormat = "yy년 MM월 dd일 (EEEE)"
+        formatter.locale = Locale(identifier: "ko_kr")
+        
+        return formatter.string(from: date)
     }
     
     // MARK: Method

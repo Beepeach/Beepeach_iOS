@@ -18,6 +18,7 @@ class DetailDiaryViewController: UIViewController {
     var diary: Diary?
     var indexPath: IndexPath?
     weak var delegate: DetailDiaryViewDelegate?
+    let writeDiaryVCIndentifier: String = "WriteDiaryViewController"
 
     // MARK: @IBOutlet
     @IBOutlet weak var titleLabel: UILabel!
@@ -26,6 +27,40 @@ class DetailDiaryViewController: UIViewController {
     
     // MARK: @IBAction
     @IBAction func tapEdit(_ sender: UIButton) {
+        guard let writeDiaryVC: WriteDiaryViewController = self.storyboard?.instantiateViewController(withIdentifier: self.writeDiaryVCIndentifier) as? WriteDiaryViewController else {
+            return
+        }
+        guard let indexPath = self.indexPath else {
+            return
+        }
+        guard let diary = self.diary else {
+            return
+        }
+        
+        writeDiaryVC.diaryEditorMode = .edit(indexPath, diary)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(editDiaryNotification(_:)),
+            name: NSNotification.Name("editDiary"),
+            object: nil
+        )
+        
+        self.navigationController?.pushViewController(writeDiaryVC, animated: true)
+    }
+    
+    @objc private func editDiaryNotification(_ noti: Notification) {
+        guard let diary = noti.object as? Diary else {
+            return
+        }
+        /*
+        guard let item = noti.userInfo?["indexPath.item"] as? Int else {
+            return
+        }
+        */
+        
+        self.diary = diary
+        self.configureView()
     }
     
     @IBAction func tapDelete(_ sender: UIButton) {
@@ -56,5 +91,11 @@ class DetailDiaryViewController: UIViewController {
         formatter.locale = Locale(identifier: "ko_kr")
         
         return formatter.string(from: date)
+    }
+    
+    
+    // MARK: Deinitializer
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
