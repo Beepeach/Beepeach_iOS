@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
     
     private func saveDiaryList() {
-        let date = self.diaryList.map {
+        let data = self.diaryList.map {
             [
                 "uuidString": $0.uuidString,
                 "title": $0.title,
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             ]
         }
         let userDefaults = UserDefaults.standard
-        userDefaults.set(date, forKey: "diaryList")
+        userDefaults.set(data, forKey: "diaryList")
     }
 
     // MARK: @IBOutlet
