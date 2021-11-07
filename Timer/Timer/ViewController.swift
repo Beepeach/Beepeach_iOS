@@ -15,11 +15,13 @@ enum TimerStatus {
 }
 
 class ViewController: UIViewController {
-    var duration: Int = 60
-    var timerStatus: TimerStatus = .end
-    var timer: DispatchSourceTimer?
-    var currentSeconds: Int = 0
+    // MARK: Properties
+    private var duration: Int = 60
+    private var timerStatus: TimerStatus = .end
+    private var timer: DispatchSourceTimer?
+    private var currentSeconds: Int = 0
 
+    // MARK: @IBOutlet
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
@@ -27,6 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var toggleButton: UIButton!
     
+    // MARK: @IBAction
     @IBAction func tapCancel(_ sender: UIButton) {
         switch self.timerStatus {
         case .start, .pause:
@@ -37,6 +40,26 @@ class ViewController: UIViewController {
         }
     }
     
+    private func stopTimer() {
+        if self.timerStatus == .pause {
+            self.timer?.resume()
+        }
+        
+        self.timerStatus = .end
+        self.cancelButton.isEnabled = false
+        self.toggleButton.isSelected = false
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.timerLabel.alpha = 0.0
+            self.progressView.alpha = 0.0
+            self.datePicker.alpha = 1.0
+            self.imageView.transform = .identity
+        })
+        
+        self.timer?.cancel()
+        self.timer = nil
+    }
+    
     @IBAction func tapToggle(_ sender: UIButton) {
         self.duration = Int(self.datePicker.countDownDuration)
         debugPrint(self.duration)
@@ -45,11 +68,13 @@ class ViewController: UIViewController {
         case .end:
             self.currentSeconds = self.duration
             self.timerStatus = .start
+            
             UIView.animate(withDuration: 0.3, animations: {
                 self.timerLabel.alpha = 1.0
                 self.progressView.alpha = 1.0
                 self.datePicker.alpha = 0.0
             })
+            
             self.toggleButton.isSelected = true
             self.cancelButton.isEnabled = true
             self.startTimer()
@@ -66,13 +91,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func setTimerInfoViewVisable(isHidden: Bool) {
-        UIView.animate(withDuration: 0.3, animations: {})
-        self.timerLabel.isHidden = isHidden
-        self.progressView.isHidden = isHidden
-    }
-    
-    func startTimer() {
+    private func startTimer() {
         if self.timer == nil {
             self.timer = DispatchSource.makeTimerSource(flags: [], queue: .main)
             self.timer?.schedule(deadline: .now(), repeating: 1)
@@ -96,7 +115,7 @@ class ViewController: UIViewController {
                 
                 self.currentSeconds -= 1
                 
-                if self.currentSeconds ?? 0 <= 0 {
+                if self.currentSeconds <= 0 {
                     self.stopTimer()
                     AudioServicesPlaySystemSound(1005)
                 }
@@ -105,25 +124,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func stopTimer() {
-        if self.timerStatus == .pause {
-            self.timer?.resume()
-        }
-        
-        self.timerStatus = .end
-        self.cancelButton.isEnabled = false
-        UIView.animate(withDuration: 0.3, animations: {
-            self.timerLabel.alpha = 0.0
-            self.progressView.alpha = 0.0
-            self.datePicker.alpha = 1.0
-            self.imageView.transform = .identity
-        })
-        self.toggleButton.isSelected = false
-        self.timer?.cancel()
-        self.timer = nil
-    }
- 
-    
+    // MARK: ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureToggleButton()
