@@ -113,5 +113,5 @@ iOSInjectionProject/
 
 ## APIKEYS ##
 APIKeys.swift
-GoogleService-info
+GoogleService-Info
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods
