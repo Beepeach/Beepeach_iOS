@@ -19,6 +19,7 @@
 		EE507DE527429EF0005AC6E1 /* CreditCardListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE507DE427429EF0005AC6E1 /* CreditCardListUITests.swift */; };
 		EE507DE727429EF0005AC6E1 /* CreditCardListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE507DE627429EF0005AC6E1 /* CreditCardListUITestsLaunchTests.swift */; };
 		EE507DF427429F23005AC6E1 /* CardListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE507DF327429F23005AC6E1 /* CardListTableViewController.swift */; };
+		EE6A7B9F27451A900095386E /* CreditCardDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A7B9E27451A900095386E /* CreditCardDummy.swift */; };
 		EE6F896E2742C034006164FF /* money.json in Resources */ = {isa = PBXBuildFile; fileRef = EE6F896D2742C034006164FF /* money.json */; };
 		EE6F89702743BA82006164FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE6F896F2743BA82006164FF /* GoogleService-Info.plist */; };
 		EE70A32B2742BE1F00647D9B /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70A32A2742BE1F00647D9B /* CardDetailViewController.swift */; };
@@ -67,6 +68,7 @@
 		EE507DE427429EF0005AC6E1 /* CreditCardListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardListUITests.swift; sourceTree = "<group>"; };
 		EE507DE627429EF0005AC6E1 /* CreditCardListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EE507DF327429F23005AC6E1 /* CardListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListTableViewController.swift; sourceTree = "<group>"; };
+		EE6A7B9E27451A900095386E /* CreditCardDummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardDummy.swift; sourceTree = "<group>"; };
 		EE6F896D2742C034006164FF /* money.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = money.json; sourceTree = "<group>"; };
 		EE6F896F2743BA82006164FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE70A32A2742BE1F00647D9B /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				EE6F896D2742C034006164FF /* money.json */,
+				EE6A7B9E27451A900095386E /* CreditCardDummy.swift */,
 				EEB5E6A92742ACD300E9EB4B /* CreditCard.swift */,
 				EE507DC327429EEF005AC6E1 /* AppDelegate.swift */,
 				EE507DC527429EEF005AC6E1 /* SceneDelegate.swift */,
@@ -431,6 +434,7 @@
 				EE70A32B2742BE1F00647D9B /* CardDetailViewController.swift in Sources */,
 				EE507DC427429EEF005AC6E1 /* AppDelegate.swift in Sources */,
 				EE507DC627429EEF005AC6E1 /* SceneDelegate.swift in Sources */,
+				EE6A7B9F27451A900095386E /* CreditCardDummy.swift in Sources */,
 				EE507DF427429F23005AC6E1 /* CardListTableViewController.swift in Sources */,
 				EEB5E6AD2742ADA600E9EB4B /* CardListTableViewCell.swift in Sources */,
 			);
