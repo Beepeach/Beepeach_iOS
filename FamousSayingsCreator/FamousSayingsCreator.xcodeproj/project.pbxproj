@@ -101,10 +101,10 @@
 		EE34DF1A271C117300170057 /* FamousSayingsCreator */ = {
 			isa = PBXGroup;
 			children = (
+				EE5605032747E2E3008A56B4 /* Model */,
 				EE34DF1B271C117300170057 /* AppDelegate.swift */,
 				EE34DF1D271C117300170057 /* SceneDelegate.swift */,
 				EE34DF1F271C117300170057 /* ViewController.swift */,
-				EE34DF4B271C1AC800170057 /* Quote.swift */,
 				EE34DF21271C117300170057 /* Main.storyboard */,
 				EE34DF24271C117400170057 /* Assets.xcassets */,
 				EE34DF26271C117400170057 /* LaunchScreen.storyboard */,
@@ -128,6 +128,14 @@
 				EE34DF3E271C117400170057 /* FamousSayingsCreatorUITestsLaunchTests.swift */,
 			);
 			path = FamousSayingsCreatorUITests;
+			sourceTree = "<group>";
+		};
+		EE5605032747E2E3008A56B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE34DF4B271C1AC800170057 /* Quote.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

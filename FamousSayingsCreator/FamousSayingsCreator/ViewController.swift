@@ -23,10 +23,23 @@ class ViewController: UIViewController {
     @IBAction func tapQuoteGeneratorButton(_ sender: UIButton) {
         
         // 0 ~ 2 생성
-        let random = Int(arc4random_uniform(2))
+        let random = createRandomInt()
         let quote = quotes[random]
         self.quoteLabel.text = quote.contents
         self.nameLabel.text = quote.name
+    }
+    
+    private func createRandomUInt() -> UInt32 {
+        // 0 ~ parameter까지 UInt32
+        let random: UInt32 = arc4random_uniform(2)
+        
+        return random
+    }
+    
+    private func createRandomInt() -> Int {
+        let random: Int = Int.random(in: 0...2)
+        
+        return random
     }
 
     // MARK: ViewLifeCycle
