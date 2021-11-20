@@ -38,7 +38,6 @@ class ViewController: UIViewController {
     
     private func createRandomInt() -> Int {
         let random: Int = Int.random(in: 0...2)
-        
         return random
     }
 
