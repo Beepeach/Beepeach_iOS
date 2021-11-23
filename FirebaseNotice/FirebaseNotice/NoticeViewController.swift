@@ -8,13 +8,17 @@
 import UIKit
 
 class NoticeViewController: UIViewController {
+    // MARK: Properties
     var noticeContents: (title: String, detail: String, date: String)?
     
+    // MARK: @IBOutlet
     @IBOutlet weak var noticeView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    
+    // MARK: ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -30,6 +34,7 @@ class NoticeViewController: UIViewController {
         dateLabel.text = noticeContents.date
     }
     
+    // MARK: @IBAction
     @IBAction func TapDoneButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }

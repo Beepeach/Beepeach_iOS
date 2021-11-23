@@ -23,6 +23,7 @@
 		EE5F688E274BB74F00381A83 /* NoticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5F688C274BB74F00381A83 /* NoticeViewController.xib */; };
 		EE5F6890274BBAEE00381A83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE5F688F274BBAEE00381A83 /* GoogleService-Info.plist */; };
 		EE9B742B274BBFAC002D5739 /* RemoteConfigDefault.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE9B742A274BBFAC002D5739 /* RemoteConfigDefault.plist */; };
+		EE9B742D274C972F002D5739 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9B742C274C972F002D5739 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		EE5F688C274BB74F00381A83 /* NoticeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeViewController.xib; sourceTree = "<group>"; };
 		EE5F688F274BBAEE00381A83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE9B742A274BBFAC002D5739 /* RemoteConfigDefault.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefault.plist; sourceTree = "<group>"; };
+		EE9B742C274C972F002D5739 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D40775D5C0F8BE6347F4E3DF /* Pods_FirebaseNotice.framework in Frameworks */,
+				EE9B742D274C972F002D5739 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +118,7 @@
 		362CF000F26CC39F304416EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE9B742C274C972F002D5739 /* AdSupport.framework */,
 				851118C48CAFDD04AE5DD00B /* Pods_FirebaseNotice.framework */,
 				9C71441FF35D1E3CC640C790 /* Pods_FirebaseNotice_FirebaseNoticeUITests.framework */,
 				A1CAC0F1B953FEE49BAB381D /* Pods_FirebaseNoticeTests.framework */,

@@ -14,18 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         FirebaseApp.configure()
+        self.printFirebaseToken()
+        return true
+    }
+    
+    private func printFirebaseToken() {
+        // Firebase가 각각의 기기에 부여한 인증토큰을 확인할 수 있다.
         Installations.installations().authTokenForcingRefresh(true) { result, error in
-            if let erorr = error {
-                print("ERROR")
+            if let error = error {
+                print("ERROR: \(error)")
                 return
             }
+            
             guard let result = result else { return }
             print("Installation auth token: \(result.authToken)")
         }
-        
-        return true
     }
 
     // MARK: UISceneSession Lifecycle

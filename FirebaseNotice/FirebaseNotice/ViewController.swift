@@ -10,11 +10,17 @@ import FirebaseRemoteConfig
 import FirebaseAnalytics
 
 class ViewController: UIViewController {
+    // MARK: Properties
     var remoteConfig: RemoteConfig?
     
+    // MARK: ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureRemoteConfig()
+    }
+    
+    private func configureRemoteConfig() {
         remoteConfig = RemoteConfig.remoteConfig()
         
         let setting = RemoteConfigSettings()
@@ -32,6 +38,7 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - ViewController getNotice remoteConfig
 extension ViewController {
     func getNotice() {
         guard let remoteConfig = self.remoteConfig else { return }
@@ -67,19 +74,20 @@ extension ViewController {
 }
 
 
-// ABTesting
+// MARK: - ViewController showEventAlert() A/BTesting
 extension ViewController {
     func showEventAlert() {
         guard let remoteConfig = remoteConfig else { return }
         
         remoteConfig.fetch { [weak self] status, _ in
             if status == .success {
-//                remoteConfig.activate(completion: nil)
+                remoteConfig.activate(completion: nil)
             } else {
                 print("Config not fetched")
             }
             
-            let message = remoteConfig["message"].stringValue ?? ""
+            let message = remoteConfig["message"].stringValue ?? "메세지를 못받았어용"
+            
             let alertController = UIAlertController(title: "깜짝이벤트", message: message, preferredStyle: .alert)
             let confirmAction = UIAlertAction(title: "확인", style: .default) { _ in
                 // Google Analytics가 기록하게 하기
