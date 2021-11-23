@@ -9,9 +9,11 @@ import UIKit
 import UserNotifications
 
 class AlertListTableViewController: UITableViewController {
+    // MARK: Properties
     var alerts: [Alert] = []
     let userNotificationCenter: UNUserNotificationCenter = UNUserNotificationCenter.current()
     
+    // MARK: ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,6 +36,7 @@ class AlertListTableViewController: UITableViewController {
         return alerts
     }
     
+    // MARK: @IBAction
     @IBAction func tapAddAlertButton(_ sender: UIBarButtonItem) {
         guard let addAlertVC = storyboard?.instantiateViewController(withIdentifier: "AddAlertViewController") as? AddAlertViewController else {
             return
@@ -59,6 +62,7 @@ class AlertListTableViewController: UITableViewController {
         self.present(addAlertVC, animated: true, completion: nil)
     }
 }
+
 
 // MARK: - UITableViewDataSource
 extension AlertListTableViewController {

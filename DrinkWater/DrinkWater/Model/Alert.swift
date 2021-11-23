@@ -12,7 +12,7 @@ struct Alert: Codable {
     let date: Date
     var isOn: Bool
     
-    var time: String {
+    var hourAndMin: String {
         let formatter: DateFormatter = DateFormatter()
         formatter.dateFormat = "hh:mm"
         

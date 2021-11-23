@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		EEF85325274C9E1600613ECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF85324274C9E1600613ECC /* AppDelegate.swift */; };
 		EEF85327274C9E1600613ECC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF85326274C9E1600613ECC /* SceneDelegate.swift */; };
-		EEF85329274C9E1600613ECC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF85328274C9E1600613ECC /* ViewController.swift */; };
 		EEF8532C274C9E1600613ECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF8532A274C9E1600613ECC /* Main.storyboard */; };
 		EEF8532E274C9E1600613ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEF8532D274C9E1600613ECC /* Assets.xcassets */; };
 		EEF85331274C9E1600613ECC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF8532F274C9E1600613ECC /* LaunchScreen.storyboard */; };
 		EEF8533C274C9E1700613ECC /* DrinkWaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF8533B274C9E1700613ECC /* DrinkWaterTests.swift */; };
 		EEF85346274C9E1700613ECC /* DrinkWaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF85345274C9E1700613ECC /* DrinkWaterUITests.swift */; };
 		EEF85348274C9E1700613ECC /* DrinkWaterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF85347274C9E1700613ECC /* DrinkWaterUITestsLaunchTests.swift */; };
+		EEF85357274C9E6800613ECC /* AlertListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF85356274C9E6800613ECC /* AlertListTableViewController.swift */; };
+		EEF8535A274C9F2100613ECC /* AlertListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF85358274C9F2100613ECC /* AlertListTableViewCell.swift */; };
+		EEF8535B274C9F2100613ECC /* AlertListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF85359274C9F2100613ECC /* AlertListTableViewCell.xib */; };
+		EEF8535D274CA07900613ECC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF8535C274CA07900613ECC /* Alert.swift */; };
+		EEF8535F274CA3D800613ECC /* AddAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF8535E274CA3D800613ECC /* AddAlertViewController.swift */; };
+		EEF85361274CB74A00613ECC /* UNNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF85360274CB74A00613ECC /* UNNotificationCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,6 @@
 		EEF85321274C9E1600613ECC /* DrinkWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF85324274C9E1600613ECC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEF85326274C9E1600613ECC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EEF85328274C9E1600613ECC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EEF8532B274C9E1600613ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEF8532D274C9E1600613ECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEF85330274C9E1600613ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		EEF85341274C9E1700613ECC /* DrinkWaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkWaterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF85345274C9E1700613ECC /* DrinkWaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkWaterUITests.swift; sourceTree = "<group>"; };
 		EEF85347274C9E1700613ECC /* DrinkWaterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkWaterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EEF85356274C9E6800613ECC /* AlertListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListTableViewController.swift; sourceTree = "<group>"; };
+		EEF85358274C9F2100613ECC /* AlertListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListTableViewCell.swift; sourceTree = "<group>"; };
+		EEF85359274C9F2100613ECC /* AlertListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertListTableViewCell.xib; sourceTree = "<group>"; };
+		EEF8535C274CA07900613ECC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		EEF8535E274CA3D800613ECC /* AddAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlertViewController.swift; sourceTree = "<group>"; };
+		EEF85360274CB74A00613ECC /* UNNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNNotificationCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +109,14 @@
 		EEF85323274C9E1600613ECC /* DrinkWater */ = {
 			isa = PBXGroup;
 			children = (
+				EEF85363274CCD1700613ECC /* Extension */,
+				EEF85362274CCC9900613ECC /* Model */,
+				EEF85364274CCD3400613ECC /* ViewController */,
+				EEF85365274CCD4900613ECC /* Cell */,
 				EEF85324274C9E1600613ECC /* AppDelegate.swift */,
 				EEF85326274C9E1600613ECC /* SceneDelegate.swift */,
-				EEF85328274C9E1600613ECC /* ViewController.swift */,
 				EEF8532A274C9E1600613ECC /* Main.storyboard */,
+				EEF85359274C9F2100613ECC /* AlertListTableViewCell.xib */,
 				EEF8532D274C9E1600613ECC /* Assets.xcassets */,
 				EEF8532F274C9E1600613ECC /* LaunchScreen.storyboard */,
 				EEF85332274C9E1600613ECC /* Info.plist */,
@@ -125,6 +139,39 @@
 				EEF85347274C9E1700613ECC /* DrinkWaterUITestsLaunchTests.swift */,
 			);
 			path = DrinkWaterUITests;
+			sourceTree = "<group>";
+		};
+		EEF85362274CCC9900613ECC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEF8535C274CA07900613ECC /* Alert.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EEF85363274CCD1700613ECC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EEF85360274CB74A00613ECC /* UNNotificationCenter.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EEF85364274CCD3400613ECC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EEF85356274C9E6800613ECC /* AlertListTableViewController.swift */,
+				EEF8535E274CA3D800613ECC /* AddAlertViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EEF85365274CCD4900613ECC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EEF85358274C9F2100613ECC /* AlertListTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +280,7 @@
 			files = (
 				EEF85331274C9E1600613ECC /* LaunchScreen.storyboard in Resources */,
 				EEF8532E274C9E1600613ECC /* Assets.xcassets in Resources */,
+				EEF8535B274C9F2100613ECC /* AlertListTableViewCell.xib in Resources */,
 				EEF8532C274C9E1600613ECC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEF85329274C9E1600613ECC /* ViewController.swift in Sources */,
 				EEF85325274C9E1600613ECC /* AppDelegate.swift in Sources */,
+				EEF85357274C9E6800613ECC /* AlertListTableViewController.swift in Sources */,
+				EEF8535A274C9F2100613ECC /* AlertListTableViewCell.swift in Sources */,
+				EEF8535D274CA07900613ECC /* Alert.swift in Sources */,
 				EEF85327274C9E1600613ECC /* SceneDelegate.swift in Sources */,
+				EEF85361274CB74A00613ECC /* UNNotificationCenter.swift in Sources */,
+				EEF8535F274CA3D800613ECC /* AddAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

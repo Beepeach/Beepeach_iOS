@@ -6,15 +6,31 @@
 //
 
 import UIKit
+import NotificationCenter
+import UserNotifications
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    var userNotificationCenter: UNUserNotificationCenter?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        requestNotificationAuthorication()
+        
         return true
+    }
+    
+    private func requestNotificationAuthorication() {
+        userNotificationCenter = UNUserNotificationCenter.current()
+        userNotificationCenter?.delegate = self
+        
+        let authrizationOptions = UNAuthorizationOptions(arrayLiteral: [.alert, .badge, .sound])
+        userNotificationCenter?.requestAuthorization(options: authrizationOptions, completionHandler: { _, error in
+            if let error = error {
+                print("ERROR: notification authrization request \(error.localizedDescription)")
+            }
+        })
     }
 
     // MARK: UISceneSession Lifecycle
@@ -34,3 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.banner, .list, .badge, .sound])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        completionHandler()
+    }
+}
