@@ -1,0 +1,791 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		492ED654C514353D661A1AD1 /* Pods_RemoteNotification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D194F7C5D2CAF3BA3F6EAA /* Pods_RemoteNotification.framework */; };
+		50EE1DAC6ACD9C7C1C8B81A2 /* Pods_RemoteNotification_RemoteNotificationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C14A18915C27DC21ABC88C5 /* Pods_RemoteNotification_RemoteNotificationUITests.framework */; };
+		BC402EB3B510BA54325C6DE6 /* Pods_RemoteNotificationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8570D2E65B7AA3E5850A2CB9 /* Pods_RemoteNotificationTests.framework */; };
+		EE30FB8E274E60BC0081228B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30FB8D274E60BC0081228B /* AppDelegate.swift */; };
+		EE30FB90274E60BC0081228B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30FB8F274E60BC0081228B /* SceneDelegate.swift */; };
+		EE30FB92274E60BC0081228B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30FB91274E60BC0081228B /* ViewController.swift */; };
+		EE30FB95274E60BC0081228B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE30FB93274E60BC0081228B /* Main.storyboard */; };
+		EE30FB97274E60BD0081228B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE30FB96274E60BD0081228B /* Assets.xcassets */; };
+		EE30FB9A274E60BD0081228B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE30FB98274E60BD0081228B /* LaunchScreen.storyboard */; };
+		EE30FBA5274E60BD0081228B /* RemoteNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30FBA4274E60BD0081228B /* RemoteNotificationTests.swift */; };
+		EE30FBAF274E60BD0081228B /* RemoteNotificationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30FBAE274E60BD0081228B /* RemoteNotificationUITests.swift */; };
+		EE30FBB1274E60BD0081228B /* RemoteNotificationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30FBB0274E60BD0081228B /* RemoteNotificationUITestsLaunchTests.swift */; };
+		EE30FBBE274E61690081228B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE30FBBD274E61690081228B /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE30FBA1274E60BD0081228B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE30FB82274E60BC0081228B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE30FB89274E60BC0081228B;
+			remoteInfo = RemoteNotification;
+		};
+		EE30FBAB274E60BD0081228B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE30FB82274E60BC0081228B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE30FB89274E60BC0081228B;
+			remoteInfo = RemoteNotification;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		408FF495506552AE21751B6D /* Pods-RemoteNotification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteNotification.release.xcconfig"; path = "Target Support Files/Pods-RemoteNotification/Pods-RemoteNotification.release.xcconfig"; sourceTree = "<group>"; };
+		8057668508A6B2AA06A7CE25 /* Pods-RemoteNotificationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteNotificationTests.debug.xcconfig"; path = "Target Support Files/Pods-RemoteNotificationTests/Pods-RemoteNotificationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8570D2E65B7AA3E5850A2CB9 /* Pods_RemoteNotificationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteNotificationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C14A18915C27DC21ABC88C5 /* Pods_RemoteNotification_RemoteNotificationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteNotification_RemoteNotificationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B81766CCE78EBCF6FB632999 /* Pods-RemoteNotification-RemoteNotificationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteNotification-RemoteNotificationUITests.release.xcconfig"; path = "Target Support Files/Pods-RemoteNotification-RemoteNotificationUITests/Pods-RemoteNotification-RemoteNotificationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CDC6A1E6970BBA65B06A64FB /* Pods-RemoteNotification-RemoteNotificationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteNotification-RemoteNotificationUITests.debug.xcconfig"; path = "Target Support Files/Pods-RemoteNotification-RemoteNotificationUITests/Pods-RemoteNotification-RemoteNotificationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E4D194F7C5D2CAF3BA3F6EAA /* Pods_RemoteNotification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteNotification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE27B372274E639100764B13 /* RemoteNotification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemoteNotification.entitlements; sourceTree = "<group>"; };
+		EE30FB8A274E60BC0081228B /* RemoteNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE30FB8D274E60BC0081228B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE30FB8F274E60BC0081228B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EE30FB91274E60BC0081228B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE30FB94274E60BC0081228B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE30FB96274E60BD0081228B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE30FB99274E60BD0081228B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE30FB9B274E60BD0081228B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE30FBA0274E60BD0081228B /* RemoteNotificationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoteNotificationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE30FBA4274E60BD0081228B /* RemoteNotificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationTests.swift; sourceTree = "<group>"; };
+		EE30FBAA274E60BD0081228B /* RemoteNotificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoteNotificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE30FBAE274E60BD0081228B /* RemoteNotificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationUITests.swift; sourceTree = "<group>"; };
+		EE30FBB0274E60BD0081228B /* RemoteNotificationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE30FBBD274E61690081228B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EFEE4B29CFC8A95748B5E579 /* Pods-RemoteNotification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteNotification.debug.xcconfig"; path = "Target Support Files/Pods-RemoteNotification/Pods-RemoteNotification.debug.xcconfig"; sourceTree = "<group>"; };
+		FFC55209F98020F20906732C /* Pods-RemoteNotificationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteNotificationTests.release.xcconfig"; path = "Target Support Files/Pods-RemoteNotificationTests/Pods-RemoteNotificationTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE30FB87274E60BC0081228B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				492ED654C514353D661A1AD1 /* Pods_RemoteNotification.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE30FB9D274E60BD0081228B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC402EB3B510BA54325C6DE6 /* Pods_RemoteNotificationTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE30FBA7274E60BD0081228B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50EE1DAC6ACD9C7C1C8B81A2 /* Pods_RemoteNotification_RemoteNotificationUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CA00AB0EC0DBC45CA561866 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFEE4B29CFC8A95748B5E579 /* Pods-RemoteNotification.debug.xcconfig */,
+				408FF495506552AE21751B6D /* Pods-RemoteNotification.release.xcconfig */,
+				CDC6A1E6970BBA65B06A64FB /* Pods-RemoteNotification-RemoteNotificationUITests.debug.xcconfig */,
+				B81766CCE78EBCF6FB632999 /* Pods-RemoteNotification-RemoteNotificationUITests.release.xcconfig */,
+				8057668508A6B2AA06A7CE25 /* Pods-RemoteNotificationTests.debug.xcconfig */,
+				FFC55209F98020F20906732C /* Pods-RemoteNotificationTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6D9FB5C7C789CB060FA4AD51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4D194F7C5D2CAF3BA3F6EAA /* Pods_RemoteNotification.framework */,
+				9C14A18915C27DC21ABC88C5 /* Pods_RemoteNotification_RemoteNotificationUITests.framework */,
+				8570D2E65B7AA3E5850A2CB9 /* Pods_RemoteNotificationTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE30FB81274E60BC0081228B = {
+			isa = PBXGroup;
+			children = (
+				EE30FB8C274E60BC0081228B /* RemoteNotification */,
+				EE30FBA3274E60BD0081228B /* RemoteNotificationTests */,
+				EE30FBAD274E60BD0081228B /* RemoteNotificationUITests */,
+				EE30FB8B274E60BC0081228B /* Products */,
+				3CA00AB0EC0DBC45CA561866 /* Pods */,
+				6D9FB5C7C789CB060FA4AD51 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EE30FB8B274E60BC0081228B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE30FB8A274E60BC0081228B /* RemoteNotification.app */,
+				EE30FBA0274E60BD0081228B /* RemoteNotificationTests.xctest */,
+				EE30FBAA274E60BD0081228B /* RemoteNotificationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE30FB8C274E60BC0081228B /* RemoteNotification */ = {
+			isa = PBXGroup;
+			children = (
+				EE27B372274E639100764B13 /* RemoteNotification.entitlements */,
+				EE30FB8D274E60BC0081228B /* AppDelegate.swift */,
+				EE30FB8F274E60BC0081228B /* SceneDelegate.swift */,
+				EE30FB91274E60BC0081228B /* ViewController.swift */,
+				EE30FB93274E60BC0081228B /* Main.storyboard */,
+				EE30FB96274E60BD0081228B /* Assets.xcassets */,
+				EE30FB98274E60BD0081228B /* LaunchScreen.storyboard */,
+				EE30FB9B274E60BD0081228B /* Info.plist */,
+				EE30FBBD274E61690081228B /* GoogleService-Info.plist */,
+			);
+			path = RemoteNotification;
+			sourceTree = "<group>";
+		};
+		EE30FBA3274E60BD0081228B /* RemoteNotificationTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE30FBA4274E60BD0081228B /* RemoteNotificationTests.swift */,
+			);
+			path = RemoteNotificationTests;
+			sourceTree = "<group>";
+		};
+		EE30FBAD274E60BD0081228B /* RemoteNotificationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE30FBAE274E60BD0081228B /* RemoteNotificationUITests.swift */,
+				EE30FBB0274E60BD0081228B /* RemoteNotificationUITestsLaunchTests.swift */,
+			);
+			path = RemoteNotificationUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE30FB89274E60BC0081228B /* RemoteNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE30FBB4274E60BD0081228B /* Build configuration list for PBXNativeTarget "RemoteNotification" */;
+			buildPhases = (
+				BCECAE6A4CF95DC381495F0C /* [CP] Check Pods Manifest.lock */,
+				EE30FB86274E60BC0081228B /* Sources */,
+				EE30FB87274E60BC0081228B /* Frameworks */,
+				EE30FB88274E60BC0081228B /* Resources */,
+				ABEF9387380395C1D01310E3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoteNotification;
+			productName = RemoteNotification;
+			productReference = EE30FB8A274E60BC0081228B /* RemoteNotification.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE30FB9F274E60BD0081228B /* RemoteNotificationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE30FBB7274E60BD0081228B /* Build configuration list for PBXNativeTarget "RemoteNotificationTests" */;
+			buildPhases = (
+				9FA78C125185CB112AD2BA8D /* [CP] Check Pods Manifest.lock */,
+				EE30FB9C274E60BD0081228B /* Sources */,
+				EE30FB9D274E60BD0081228B /* Frameworks */,
+				EE30FB9E274E60BD0081228B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE30FBA2274E60BD0081228B /* PBXTargetDependency */,
+			);
+			name = RemoteNotificationTests;
+			productName = RemoteNotificationTests;
+			productReference = EE30FBA0274E60BD0081228B /* RemoteNotificationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE30FBA9274E60BD0081228B /* RemoteNotificationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE30FBBA274E60BD0081228B /* Build configuration list for PBXNativeTarget "RemoteNotificationUITests" */;
+			buildPhases = (
+				A5A198015F10FC43692E28AE /* [CP] Check Pods Manifest.lock */,
+				EE30FBA6274E60BD0081228B /* Sources */,
+				EE30FBA7274E60BD0081228B /* Frameworks */,
+				EE30FBA8274E60BD0081228B /* Resources */,
+				8B0BA2B575A241B5525E68F9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE30FBAC274E60BD0081228B /* PBXTargetDependency */,
+			);
+			name = RemoteNotificationUITests;
+			productName = RemoteNotificationUITests;
+			productReference = EE30FBAA274E60BD0081228B /* RemoteNotificationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE30FB82274E60BC0081228B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					EE30FB89274E60BC0081228B = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					EE30FB9F274E60BD0081228B = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = EE30FB89274E60BC0081228B;
+					};
+					EE30FBA9274E60BD0081228B = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = EE30FB89274E60BC0081228B;
+					};
+				};
+			};
+			buildConfigurationList = EE30FB85274E60BC0081228B /* Build configuration list for PBXProject "RemoteNotification" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE30FB81274E60BC0081228B;
+			productRefGroup = EE30FB8B274E60BC0081228B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE30FB89274E60BC0081228B /* RemoteNotification */,
+				EE30FB9F274E60BD0081228B /* RemoteNotificationTests */,
+				EE30FBA9274E60BD0081228B /* RemoteNotificationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE30FB88274E60BC0081228B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE30FB9A274E60BD0081228B /* LaunchScreen.storyboard in Resources */,
+				EE30FBBE274E61690081228B /* GoogleService-Info.plist in Resources */,
+				EE30FB97274E60BD0081228B /* Assets.xcassets in Resources */,
+				EE30FB95274E60BC0081228B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE30FB9E274E60BD0081228B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE30FBA8274E60BD0081228B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B0BA2B575A241B5525E68F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RemoteNotification-RemoteNotificationUITests/Pods-RemoteNotification-RemoteNotificationUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RemoteNotification-RemoteNotificationUITests/Pods-RemoteNotification-RemoteNotificationUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RemoteNotification-RemoteNotificationUITests/Pods-RemoteNotification-RemoteNotificationUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FA78C125185CB112AD2BA8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RemoteNotificationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5A198015F10FC43692E28AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RemoteNotification-RemoteNotificationUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABEF9387380395C1D01310E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RemoteNotification/Pods-RemoteNotification-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RemoteNotification/Pods-RemoteNotification-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RemoteNotification/Pods-RemoteNotification-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCECAE6A4CF95DC381495F0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RemoteNotification-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE30FB86274E60BC0081228B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE30FB92274E60BC0081228B /* ViewController.swift in Sources */,
+				EE30FB8E274E60BC0081228B /* AppDelegate.swift in Sources */,
+				EE30FB90274E60BC0081228B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE30FB9C274E60BD0081228B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE30FBA5274E60BD0081228B /* RemoteNotificationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE30FBA6274E60BD0081228B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE30FBAF274E60BD0081228B /* RemoteNotificationUITests.swift in Sources */,
+				EE30FBB1274E60BD0081228B /* RemoteNotificationUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE30FBA2274E60BD0081228B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE30FB89274E60BC0081228B /* RemoteNotification */;
+			targetProxy = EE30FBA1274E60BD0081228B /* PBXContainerItemProxy */;
+		};
+		EE30FBAC274E60BD0081228B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE30FB89274E60BC0081228B /* RemoteNotification */;
+			targetProxy = EE30FBAB274E60BD0081228B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE30FB93274E60BC0081228B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE30FB94274E60BC0081228B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE30FB98274E60BD0081228B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE30FB99274E60BD0081228B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE30FBB2274E60BD0081228B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE30FBB3274E60BD0081228B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE30FBB5274E60BD0081228B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFEE4B29CFC8A95748B5E579 /* Pods-RemoteNotification.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RemoteNotification/RemoteNotification.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5RH9MF273;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RemoteNotification/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.beepeach.RemoteNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE30FBB6274E60BD0081228B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 408FF495506552AE21751B6D /* Pods-RemoteNotification.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RemoteNotification/RemoteNotification.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5RH9MF273;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RemoteNotification/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.beepeach.RemoteNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE30FBB8274E60BD0081228B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8057668508A6B2AA06A7CE25 /* Pods-RemoteNotificationTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5RH9MF273;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.beepeach.RemoteNotificationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RemoteNotification.app/RemoteNotification";
+			};
+			name = Debug;
+		};
+		EE30FBB9274E60BD0081228B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFC55209F98020F20906732C /* Pods-RemoteNotificationTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5RH9MF273;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.beepeach.RemoteNotificationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RemoteNotification.app/RemoteNotification";
+			};
+			name = Release;
+		};
+		EE30FBBB274E60BD0081228B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDC6A1E6970BBA65B06A64FB /* Pods-RemoteNotification-RemoteNotificationUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5RH9MF273;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.beepeach.RemoteNotificationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RemoteNotification;
+			};
+			name = Debug;
+		};
+		EE30FBBC274E60BD0081228B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B81766CCE78EBCF6FB632999 /* Pods-RemoteNotification-RemoteNotificationUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5RH9MF273;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.beepeach.RemoteNotificationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RemoteNotification;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE30FB85274E60BC0081228B /* Build configuration list for PBXProject "RemoteNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE30FBB2274E60BD0081228B /* Debug */,
+				EE30FBB3274E60BD0081228B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE30FBB4274E60BD0081228B /* Build configuration list for PBXNativeTarget "RemoteNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE30FBB5274E60BD0081228B /* Debug */,
+				EE30FBB6274E60BD0081228B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE30FBB7274E60BD0081228B /* Build configuration list for PBXNativeTarget "RemoteNotificationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE30FBB8274E60BD0081228B /* Debug */,
+				EE30FBB9274E60BD0081228B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE30FBBA274E60BD0081228B /* Build configuration list for PBXNativeTarget "RemoteNotificationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE30FBBB274E60BD0081228B /* Debug */,
+				EE30FBBC274E60BD0081228B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE30FB82274E60BC0081228B /* Project object */;
+}
