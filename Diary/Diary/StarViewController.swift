@@ -105,6 +105,11 @@ class StarViewController: UIViewController {
             self.diaryList = self.diaryList.sorted(by: {
                 $0.date.compare($1.date) == .orderedDescending
             })
+            
+            if let index = self.diaryList.firstIndex(where: { $0.uuidString == uuidString }) {
+                self.collectionView.insertItems(at: [IndexPath(item: index, section: 0)])
+            }
+            
             self.collectionView.reloadData()
         } else {
             guard let index = self.diaryList.firstIndex(where: { $0.uuidString == uuidString }) else {
