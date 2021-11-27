@@ -113,19 +113,16 @@
 		EEB4D1BC274FA786008D6D60 /* NetflixSample */ = {
 			isa = PBXGroup;
 			children = (
+				EEB4D20227512808008D6D60 /* Extension */,
+				EEB4D200275127E4008D6D60 /* Model */,
+				EEB4D201275127EF008D6D60 /* Cell */,
 				EEB4D1BD274FA786008D6D60 /* AppDelegate.swift */,
 				EEB4D1BF274FA786008D6D60 /* SceneDelegate.swift */,
 				EEB4D1C6274FA787008D6D60 /* Assets.xcassets */,
 				EEB4D1C8274FA787008D6D60 /* LaunchScreen.storyboard */,
 				EEB4D1CB274FA787008D6D60 /* Info.plist */,
 				EEB4D1F2274FB379008D6D60 /* Content.plist */,
-				EEB4D1F4274FB3B1008D6D60 /* Content.swift */,
 				EEB4D1ED274FA880008D6D60 /* HomeViewController.swift */,
-				EEB4D1F6274FB722008D6D60 /* ContentCollectionViewCell.swift */,
-				EEB4D1F8274FB8EE008D6D60 /* ContentHeaderCollectionReusableView.swift */,
-				EEB4D1FA274FC3C6008D6D60 /* ContentRankCollectionViewCell.swift */,
-				EEB4D1FC274FC6C6008D6D60 /* ContentMainCollectionViewCell.swift */,
-				EEB4D1FE274FCB85008D6D60 /* UIButton+layout.swift */,
 			);
 			path = NetflixSample;
 			sourceTree = "<group>";
@@ -145,6 +142,33 @@
 				EEB4D1E0274FA787008D6D60 /* NetflixSampleUITestsLaunchTests.swift */,
 			);
 			path = NetflixSampleUITests;
+			sourceTree = "<group>";
+		};
+		EEB4D200275127E4008D6D60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEB4D1F4274FB3B1008D6D60 /* Content.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EEB4D201275127EF008D6D60 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EEB4D1F6274FB722008D6D60 /* ContentCollectionViewCell.swift */,
+				EEB4D1FA274FC3C6008D6D60 /* ContentRankCollectionViewCell.swift */,
+				EEB4D1FC274FC6C6008D6D60 /* ContentMainCollectionViewCell.swift */,
+				EEB4D1F8274FB8EE008D6D60 /* ContentHeaderCollectionReusableView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EEB4D20227512808008D6D60 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EEB4D1FE274FCB85008D6D60 /* UIButton+layout.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

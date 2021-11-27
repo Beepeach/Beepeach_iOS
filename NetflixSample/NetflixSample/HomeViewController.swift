@@ -9,32 +9,24 @@ import UIKit
 import SwiftUI
 
 class HomeViewController: UICollectionViewController {
+    // MARK: Properties
     var contents: [Content] = []
     var mainItem: Item?
     
+    // MARK: ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .black
         
-        // Data Configure
+        setConetentData()
+        
+        configureNavigationBar()
+        configureCollectionView()
+    }
+    
+    private func setConetentData() {
         contents = getContents()
-        
-        // Navigation configure
-        navigationController?.navigationBar.backgroundColor = .clear
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.hidesBarsOnSwipe = true
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "netflixIcon"), style: .plain, target: nil, action: nil)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle"), style: .plain, target: nil, action: nil)
-        
-        
-        // CollectionView Item(Cell)
-        collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "ContentCollectionViewCell")
-        collectionView.register(ContentHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ContentHeaderCollectionReusableView")
-        collectionView.register(ContentRankCollectionViewCell.self, forCellWithReuseIdentifier: "ContentRankCollectionViewCell")
-        collectionView.register(ContentMainCollectionViewCell.self, forCellWithReuseIdentifier: "ContentMainCollectionViewCell")
-        collectionView.collectionViewLayout = getLayout()
+        mainItem = contents.first?.contentItem.randomElement()
     }
     
     private func getContents() -> [Content] {
@@ -45,6 +37,25 @@ class HomeViewController: UICollectionViewController {
               }
         
         return list
+        
+    }
+    
+    private func configureNavigationBar() {
+        navigationController?.navigationBar.backgroundColor = .clear
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.hidesBarsOnSwipe = true
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "netflixIcon"), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle"), style: .plain, target: nil, action: nil)
+    }
+    
+    private func configureCollectionView() {
+        collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "ContentCollectionViewCell")
+        collectionView.register(ContentHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ContentHeaderCollectionReusableView")
+        collectionView.register(ContentRankCollectionViewCell.self, forCellWithReuseIdentifier: "ContentRankCollectionViewCell")
+        collectionView.register(ContentMainCollectionViewCell.self, forCellWithReuseIdentifier: "ContentMainCollectionViewCell")
+        collectionView.collectionViewLayout = getLayout()
     }
     
     private func getLayout() -> UICollectionViewLayout {
@@ -58,8 +69,8 @@ class HomeViewController: UICollectionViewController {
                 return self.createLargeTypeSection()
             case .rank:
                 return self.createRankTypeSection()
-            default:
-                return nil
+            case .main:
+                return self.createMainTypeSection()
             }
             
         }
@@ -128,6 +139,22 @@ class HomeViewController: UICollectionViewController {
         return section
     }
     
+    private func createMainTypeSection() -> NSCollectionLayoutSection {
+        // item
+        let itemSize  = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        // group
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(450))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        
+        // section
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = .init(top: 0, leading: 0, bottom: 20, trailing: 0)
+        
+        return section
+    }
+    
     private func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
         let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30))
         
@@ -145,15 +172,12 @@ extension HomeViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if contents[section].sectionType == .basic || contents[section].sectionType == .large || contents[section].sectionType == .rank {
-            switch section {
-            case 0:
-                return 1
-            default:
-                return contents[section].contentItem.count
-            }
+        switch section {
+        case 0:
+            return 1
+        default:
+            return contents[section].contentItem.count
         }
-        return 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -174,8 +198,15 @@ extension HomeViewController {
             cell.rankLabel.text = String(describing: indexPath.item + 1)
             
             return cell
-        default:
-            return UICollectionViewCell()
+        case .main:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContentMainCollectionViewCell", for: indexPath) as? ContentMainCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            
+            cell.imageView.image = mainItem?.image
+            cell.descriptionLabel.text = mainItem?.description
+            
+            return cell
         }
     }
     

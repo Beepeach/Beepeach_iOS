@@ -13,20 +13,26 @@ class ContentRankCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        // contentView
+        configureContentView()
+        configureImageView()
+        configureRankLabel()
+    }
+    
+    private func configureContentView() {
         contentView.layer.cornerRadius = 5
         contentView.clipsToBounds = true
-        
-        // imageView
+    }
+    
+    private func configureImageView() {
         imageView.contentMode = .scaleToFill
         contentView.addSubview(imageView)
         imageView.snp.makeConstraints {
             $0.top.trailing.bottom.equalToSuperview()
             $0.width.equalToSuperview().multipliedBy(0.8)
         }
-        
-        // rankLabel
+    }
+    
+    private func configureRankLabel() {
         rankLabel.font = .systemFont(ofSize: 100, weight: .black)
         rankLabel.textColor = .white
         contentView.addSubview(rankLabel)
