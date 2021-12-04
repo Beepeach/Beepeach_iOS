@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="IntroViewController" customModule="FloClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FLOSplash" translatesAutoresizingMaskIntoConstraints="NO" id="lt0-jn-prw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lt0-jn-prw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="q0r-hR-Aun"/>
+                            <constraint firstAttribute="bottom" secondItem="lt0-jn-prw" secondAttribute="bottom" id="wRi-HN-wHH"/>
+                            <constraint firstItem="lt0-jn-prw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wce-bI-AfT"/>
+                            <constraint firstItem="lt0-jn-prw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="whv-h9-WPb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="c1d-qL-HKK" kind="presentation" identifier="SegueToHomeFromIntro" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="2fj-9v-0r7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="fia-H6-abT">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="CUM-jA-hyC" customClass="HomeViewController" customModule="FloClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5V0-sg-y0c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVI-xZ-VNe">
+                                <rect key="frame" x="133" y="432.5" width="148" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="음악 CollectionView"/>
+                                <connections>
+                                    <segue destination="SwM-Ku-ZRc" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="chy-zf-9pA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SA1-T0-gIH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zVI-xZ-VNe" firstAttribute="centerX" secondItem="5V0-sg-y0c" secondAttribute="centerX" id="G8t-4g-xP7"/>
+                            <constraint firstItem="zVI-xZ-VNe" firstAttribute="centerY" secondItem="5V0-sg-y0c" secondAttribute="centerY" id="Gea-Eb-de6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="T2k-DQ-ZvH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n43-xs-d93" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2033" y="-167"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="VhS-ia-h0T">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="c1d-qL-HKK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="3V9-Zo-3Mn"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aO7-LR-NIM">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="CUM-jA-hyC" kind="relationship" relationship="viewControllers" id="Um1-w3-wUz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pRA-wQ-943" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1121.7391304347827" y="130.58035714285714"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ue8-Tq-aid">
+            <objects>
+                <viewController id="64d-bl-DKd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b0w-GL-OgJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="y0c-nK-LHY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tj1-TO-W3L">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="chevron.down" catalog="system" id="sGK-d7-Nka">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AH7-Me-8ww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3860.8695652173915" y="-167.41071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EPQ-fb-Y4E">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SwM-Ku-ZRc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Ux-Tu-yLr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="64d-bl-DKd" kind="relationship" relationship="rootViewController" id="dL1-G9-NnL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QsC-Ib-ptE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2950.7246376811595" y="-167.41071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FLOSplash" width="414" height="896"/>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

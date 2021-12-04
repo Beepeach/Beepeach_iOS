@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE014CD3275AE8920078652C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE014CD2275AE8920078652C /* AppDelegate.swift */; };
+		EE014CD5275AE8920078652C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE014CD4275AE8920078652C /* SceneDelegate.swift */; };
+		EE014CDA275AE8920078652C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE014CD8275AE8920078652C /* Main.storyboard */; };
+		EE014CDC275AE8940078652C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE014CDB275AE8940078652C /* Assets.xcassets */; };
+		EE014CDF275AE8940078652C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE014CDD275AE8940078652C /* LaunchScreen.storyboard */; };
+		EE014CEA275AE8940078652C /* FloCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE014CE9275AE8940078652C /* FloCloneTests.swift */; };
+		EE014CF4275AE8940078652C /* FloCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE014CF3275AE8940078652C /* FloCloneUITests.swift */; };
+		EE014CF6275AE8940078652C /* FloCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE014CF5275AE8940078652C /* FloCloneUITestsLaunchTests.swift */; };
+		EE014D04275AEC330078652C /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE014D03275AEC330078652C /* IntroViewController.swift */; };
+		EE014D07275AEE020078652C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE014D06275AEE020078652C /* HomeViewController.swift */; };
+		EE014D0A275AF2600078652C /* MusicPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE014D09275AF2600078652C /* MusicPlayViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE014CE6275AE8940078652C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE014CC7275AE8920078652C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE014CCE275AE8920078652C;
+			remoteInfo = FloClone;
+		};
+		EE014CF0275AE8940078652C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE014CC7275AE8920078652C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE014CCE275AE8920078652C;
+			remoteInfo = FloClone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE014CCF275AE8920078652C /* FloClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE014CD2275AE8920078652C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE014CD4275AE8920078652C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EE014CD9275AE8920078652C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE014CDB275AE8940078652C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE014CDE275AE8940078652C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE014CE0275AE8940078652C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE014CE5275AE8940078652C /* FloCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE014CE9275AE8940078652C /* FloCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloCloneTests.swift; sourceTree = "<group>"; };
+		EE014CEF275AE8940078652C /* FloCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE014CF3275AE8940078652C /* FloCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloCloneUITests.swift; sourceTree = "<group>"; };
+		EE014CF5275AE8940078652C /* FloCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE014D03275AEC330078652C /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		EE014D06275AEE020078652C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EE014D09275AF2600078652C /* MusicPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE014CCC275AE8920078652C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE014CE2275AE8940078652C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE014CEC275AE8940078652C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE014CC6275AE8920078652C = {
+			isa = PBXGroup;
+			children = (
+				EE014CD1275AE8920078652C /* FloClone */,
+				EE014CE8275AE8940078652C /* FloCloneTests */,
+				EE014CF2275AE8940078652C /* FloCloneUITests */,
+				EE014CD0275AE8920078652C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE014CD0275AE8920078652C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE014CCF275AE8920078652C /* FloClone.app */,
+				EE014CE5275AE8940078652C /* FloCloneTests.xctest */,
+				EE014CEF275AE8940078652C /* FloCloneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE014CD1275AE8920078652C /* FloClone */ = {
+			isa = PBXGroup;
+			children = (
+				EE014D02275AEC190078652C /* Intro */,
+				EE014D05275AED6C0078652C /* Home */,
+				EE014D08275AF24A0078652C /* MusicPlay */,
+				EE014CD2275AE8920078652C /* AppDelegate.swift */,
+				EE014CD4275AE8920078652C /* SceneDelegate.swift */,
+				EE014CD8275AE8920078652C /* Main.storyboard */,
+				EE014CDB275AE8940078652C /* Assets.xcassets */,
+				EE014CE0275AE8940078652C /* Info.plist */,
+			);
+			path = FloClone;
+			sourceTree = "<group>";
+		};
+		EE014CE8275AE8940078652C /* FloCloneTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE014CE9275AE8940078652C /* FloCloneTests.swift */,
+			);
+			path = FloCloneTests;
+			sourceTree = "<group>";
+		};
+		EE014CF2275AE8940078652C /* FloCloneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE014CF3275AE8940078652C /* FloCloneUITests.swift */,
+				EE014CF5275AE8940078652C /* FloCloneUITestsLaunchTests.swift */,
+			);
+			path = FloCloneUITests;
+			sourceTree = "<group>";
+		};
+		EE014D02275AEC190078652C /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				EE014CDD275AE8940078652C /* LaunchScreen.storyboard */,
+				EE014D03275AEC330078652C /* IntroViewController.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		EE014D05275AED6C0078652C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EE014D06275AEE020078652C /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EE014D08275AF24A0078652C /* MusicPlay */ = {
+			isa = PBXGroup;
+			children = (
+				EE014D09275AF2600078652C /* MusicPlayViewController.swift */,
+			);
+			path = MusicPlay;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE014CCE275AE8920078652C /* FloClone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE014CF9275AE8940078652C /* Build configuration list for PBXNativeTarget "FloClone" */;
+			buildPhases = (
+				EE014CCB275AE8920078652C /* Sources */,
+				EE014CCC275AE8920078652C /* Frameworks */,
+				EE014CCD275AE8920078652C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FloClone;
+			productName = FloClone;
+			productReference = EE014CCF275AE8920078652C /* FloClone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE014CE4275AE8940078652C /* FloCloneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE014CFC275AE8940078652C /* Build configuration list for PBXNativeTarget "FloCloneTests" */;
+			buildPhases = (
+				EE014CE1275AE8940078652C /* Sources */,
+				EE014CE2275AE8940078652C /* Frameworks */,
+				EE014CE3275AE8940078652C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE014CE7275AE8940078652C /* PBXTargetDependency */,
+			);
+			name = FloCloneTests;
+			productName = FloCloneTests;
+			productReference = EE014CE5275AE8940078652C /* FloCloneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE014CEE275AE8940078652C /* FloCloneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE014CFF275AE8940078652C /* Build configuration list for PBXNativeTarget "FloCloneUITests" */;
+			buildPhases = (
+				EE014CEB275AE8940078652C /* Sources */,
+				EE014CEC275AE8940078652C /* Frameworks */,
+				EE014CED275AE8940078652C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE014CF1275AE8940078652C /* PBXTargetDependency */,
+			);
+			name = FloCloneUITests;
+			productName = FloCloneUITests;
+			productReference = EE014CEF275AE8940078652C /* FloCloneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE014CC7275AE8920078652C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					EE014CCE275AE8920078652C = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					EE014CE4275AE8940078652C = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = EE014CCE275AE8920078652C;
+					};
+					EE014CEE275AE8940078652C = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = EE014CCE275AE8920078652C;
+					};
+				};
+			};
+			buildConfigurationList = EE014CCA275AE8920078652C /* Build configuration list for PBXProject "FloClone" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE014CC6275AE8920078652C;
+			productRefGroup = EE014CD0275AE8920078652C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE014CCE275AE8920078652C /* FloClone */,
+				EE014CE4275AE8940078652C /* FloCloneTests */,
+				EE014CEE275AE8940078652C /* FloCloneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE014CCD275AE8920078652C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE014CDF275AE8940078652C /* LaunchScreen.storyboard in Resources */,
+				EE014CDC275AE8940078652C /* Assets.xcassets in Resources */,
+				EE014CDA275AE8920078652C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE014CE3275AE8940078652C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE014CED275AE8940078652C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE014CCB275AE8920078652C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE014D0A275AF2600078652C /* MusicPlayViewController.swift in Sources */,
+				EE014CD3275AE8920078652C /* AppDelegate.swift in Sources */,
+				EE014CD5275AE8920078652C /* SceneDelegate.swift in Sources */,
+				EE014D04275AEC330078652C /* IntroViewController.swift in Sources */,
+				EE014D07275AEE020078652C /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE014CE1275AE8940078652C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE014CEA275AE8940078652C /* FloCloneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE014CEB275AE8940078652C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE014CF6275AE8940078652C /* FloCloneUITestsLaunchTests.swift in Sources */,
+				EE014CF4275AE8940078652C /* FloCloneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE014CE7275AE8940078652C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE014CCE275AE8920078652C /* FloClone */;
+			targetProxy = EE014CE6275AE8940078652C /* PBXContainerItemProxy */;
+		};
+		EE014CF1275AE8940078652C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE014CCE275AE8920078652C /* FloClone */;
+			targetProxy = EE014CF0275AE8940078652C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE014CD8275AE8920078652C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE014CD9275AE8920078652C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE014CDD275AE8940078652C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE014CDE275AE8940078652C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE014CF7275AE8940078652C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE014CF8275AE8940078652C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE014CFA275AE8940078652C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5RH9MF273;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FloClone/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.beepeach.FloClone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE014CFB275AE8940078652C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5RH9MF273;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FloClone/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.beepeach.FloClone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE014CFD275AE8940078652C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5RH9MF273;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.beepeach.FloCloneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloClone.app/FloClone";
+			};
+			name = Debug;
+		};
+		EE014CFE275AE8940078652C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5RH9MF273;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.beepeach.FloCloneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloClone.app/FloClone";
+			};
+			name = Release;
+		};
+		EE014D00275AE8940078652C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5RH9MF273;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.beepeach.FloCloneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FloClone;
+			};
+			name = Debug;
+		};
+		EE014D01275AE8940078652C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5RH9MF273;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.beepeach.FloCloneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FloClone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE014CCA275AE8920078652C /* Build configuration list for PBXProject "FloClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE014CF7275AE8940078652C /* Debug */,
+				EE014CF8275AE8940078652C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE014CF9275AE8940078652C /* Build configuration list for PBXNativeTarget "FloClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE014CFA275AE8940078652C /* Debug */,
+				EE014CFB275AE8940078652C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE014CFC275AE8940078652C /* Build configuration list for PBXNativeTarget "FloCloneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE014CFD275AE8940078652C /* Debug */,
+				EE014CFE275AE8940078652C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE014CFF275AE8940078652C /* Build configuration list for PBXNativeTarget "FloCloneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE014D00275AE8940078652C /* Debug */,
+				EE014D01275AE8940078652C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE014CC7275AE8920078652C /* Project object */;
+}
