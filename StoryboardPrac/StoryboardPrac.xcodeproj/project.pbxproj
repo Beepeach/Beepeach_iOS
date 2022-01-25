@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE138CAE279FB0DD0052566A /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE138CAD279FB0DD0052566A /* Empty.xib */; };
+		EE138CB2279FB1440052566A /* UIExam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE138CB1279FB1440052566A /* UIExam.storyboard */; };
 		EE2E33492768EA1100E94605 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E33482768EA1100E94605 /* AppDelegate.swift */; };
 		EE2E334B2768EA1100E94605 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E334A2768EA1100E94605 /* SceneDelegate.swift */; };
 		EE2E334D2768EA1100E94605 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E334C2768EA1100E94605 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE138CAD279FB0DD0052566A /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
+		EE138CB1279FB1440052566A /* UIExam.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIExam.storyboard; sourceTree = "<group>"; };
 		EE2E33452768EA1100E94605 /* StoryboardPrac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryboardPrac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2E33482768EA1100E94605 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE2E334A2768EA1100E94605 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE138CAF279FB1200052566A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EE2E334E2768EA1100E94605 /* Main.storyboard */,
+				EE2E335E2769D88A00E94605 /* Second.storyboard */,
+				EE2E33602769E54200E94605 /* Third.storyboard */,
+				EE138CB1279FB1440052566A /* UIExam.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EE138CB0279FB12F0052566A /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EE138CAD279FB0DD0052566A /* Empty.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
 		EE2E333C2768EA1100E94605 = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +83,11 @@
 		EE2E33472768EA1100E94605 /* StoryboardPrac */ = {
 			isa = PBXGroup;
 			children = (
+				EE138CB0279FB12F0052566A /* Xib */,
+				EE138CAF279FB1200052566A /* Storyboard */,
 				EE2E33482768EA1100E94605 /* AppDelegate.swift */,
 				EE2E334A2768EA1100E94605 /* SceneDelegate.swift */,
 				EE2E334C2768EA1100E94605 /* ViewController.swift */,
-				EE2E334E2768EA1100E94605 /* Main.storyboard */,
-				EE2E335E2769D88A00E94605 /* Second.storyboard */,
-				EE2E33602769E54200E94605 /* Third.storyboard */,
 				EE2E33512768EA1300E94605 /* Assets.xcassets */,
 				EE2E33532768EA1300E94605 /* LaunchScreen.storyboard */,
 				EE2E33562768EA1300E94605 /* Info.plist */,
@@ -131,9 +153,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE138CB2279FB1440052566A /* UIExam.storyboard in Resources */,
 				EE2E335F2769D88A00E94605 /* Second.storyboard in Resources */,
 				EE2E33552768EA1300E94605 /* LaunchScreen.storyboard in Resources */,
 				EE2E33522768EA1300E94605 /* Assets.xcassets in Resources */,
+				EE138CAE279FB0DD0052566A /* Empty.xib in Resources */,
 				EE2E33502768EA1100E94605 /* Main.storyboard in Resources */,
 				EE2E33622769E54200E94605 /* Third.storyboard in Resources */,
 			);

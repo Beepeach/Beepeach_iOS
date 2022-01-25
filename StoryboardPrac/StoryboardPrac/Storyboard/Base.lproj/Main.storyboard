@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +21,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Second"/>
                                 <connections>
-                                    <segue destination="RD5-aT-tYj" kind="modal" modalPresentationStyle="fullScreen" id="umj-dB-mq7"/>
+                                    <segue destination="RD5-aT-tYj" kind="presentation" modalPresentationStyle="fullScreen" id="umj-dB-mq7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufI-6G-KFb">
@@ -32,14 +32,24 @@
                                     <segue destination="GNh-aI-tqP" kind="presentation" modalPresentationStyle="fullScreen" id="Uzg-Yh-tRS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WS3-Qv-sn1">
+                                <rect key="frame" x="148" y="283" width="118.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Modal to Code"/>
+                                <connections>
+                                    <action selector="tapModalToCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OxH-aj-pBd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ufI-6G-KFb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Pa-qI-v3f"/>
+                            <constraint firstItem="IFe-Dh-n5T" firstAttribute="top" secondItem="WS3-Qv-sn1" secondAttribute="bottom" constant="30" id="KPp-Cr-sxc"/>
                             <constraint firstItem="ufI-6G-KFb" firstAttribute="top" secondItem="IFe-Dh-n5T" secondAttribute="bottom" constant="200" id="SdX-cH-xV7"/>
                             <constraint firstItem="IFe-Dh-n5T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="YFL-EQ-pSu"/>
                             <constraint firstItem="IFe-Dh-n5T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bxE-SV-w6K"/>
+                            <constraint firstItem="WS3-Qv-sn1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lb0-dr-v09"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -63,7 +73,7 @@
                 <viewControllerPlaceholder storyboardName="Third" referencedIdentifier="ThridViewController" id="GNh-aI-tqP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UkI-W5-twp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="79"/>
+            <point key="canvasLocation" x="1343" y="40"/>
         </scene>
     </scenes>
     <resources>
