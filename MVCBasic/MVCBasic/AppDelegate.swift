@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  FamousSayingsCreator
+//  MVCBasic
 //
-//  Created by JunHeeJo on 10/17/21.
+//  Created by JunHeeJo on 1/25/22.
 //
 
 import UIKit
