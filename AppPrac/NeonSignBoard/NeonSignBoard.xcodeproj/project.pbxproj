@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		EEF2DFF127A5818600CA9CA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2DFF027A5818600CA9CA0 /* AppDelegate.swift */; };
 		EEF2DFF327A5818600CA9CA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2DFF227A5818600CA9CA0 /* SceneDelegate.swift */; };
-		EEF2DFF527A5818600CA9CA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2DFF427A5818600CA9CA0 /* ViewController.swift */; };
 		EEF2DFF827A5818600CA9CA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF2DFF627A5818600CA9CA0 /* Main.storyboard */; };
 		EEF2DFFA27A5818600CA9CA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEF2DFF927A5818600CA9CA0 /* Assets.xcassets */; };
 		EEF2DFFD27A5818600CA9CA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF2DFFB27A5818600CA9CA0 /* LaunchScreen.storyboard */; };
 		EEF2E00827A5818600CA9CA0 /* NeonSignBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2E00727A5818600CA9CA0 /* NeonSignBoardTests.swift */; };
 		EEF2E01227A5818600CA9CA0 /* NeonSignBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2E01127A5818600CA9CA0 /* NeonSignBoardUITests.swift */; };
 		EEF2E01427A5818600CA9CA0 /* NeonSignBoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2E01327A5818600CA9CA0 /* NeonSignBoardUITestsLaunchTests.swift */; };
+		EEF2E02127A589EC00CA9CA0 /* NeonSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2E02027A589EC00CA9CA0 /* NeonSignViewController.swift */; };
+		EEF2E02327A58A1400CA9CA0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2E02227A58A1400CA9CA0 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,6 @@
 		EEF2DFED27A5818600CA9CA0 /* NeonSignBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeonSignBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF2DFF027A5818600CA9CA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEF2DFF227A5818600CA9CA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EEF2DFF427A5818600CA9CA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EEF2DFF727A5818600CA9CA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEF2DFF927A5818600CA9CA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEF2DFFC27A5818600CA9CA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		EEF2E00D27A5818600CA9CA0 /* NeonSignBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeonSignBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF2E01127A5818600CA9CA0 /* NeonSignBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonSignBoardUITests.swift; sourceTree = "<group>"; };
 		EEF2E01327A5818600CA9CA0 /* NeonSignBoardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonSignBoardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EEF2E02027A589EC00CA9CA0 /* NeonSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonSignViewController.swift; sourceTree = "<group>"; };
+		EEF2E02227A58A1400CA9CA0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,12 @@
 			children = (
 				EEF2DFF027A5818600CA9CA0 /* AppDelegate.swift */,
 				EEF2DFF227A5818600CA9CA0 /* SceneDelegate.swift */,
-				EEF2DFF427A5818600CA9CA0 /* ViewController.swift */,
 				EEF2DFF627A5818600CA9CA0 /* Main.storyboard */,
 				EEF2DFF927A5818600CA9CA0 /* Assets.xcassets */,
 				EEF2DFFB27A5818600CA9CA0 /* LaunchScreen.storyboard */,
 				EEF2DFFE27A5818600CA9CA0 /* Info.plist */,
+				EEF2E02027A589EC00CA9CA0 /* NeonSignViewController.swift */,
+				EEF2E02227A58A1400CA9CA0 /* SettingViewController.swift */,
 			);
 			path = NeonSignBoard;
 			sourceTree = "<group>";
@@ -258,9 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEF2DFF527A5818600CA9CA0 /* ViewController.swift in Sources */,
 				EEF2DFF127A5818600CA9CA0 /* AppDelegate.swift in Sources */,
 				EEF2DFF327A5818600CA9CA0 /* SceneDelegate.swift in Sources */,
+				EEF2E02127A589EC00CA9CA0 /* NeonSignViewController.swift in Sources */,
+				EEF2E02327A58A1400CA9CA0 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

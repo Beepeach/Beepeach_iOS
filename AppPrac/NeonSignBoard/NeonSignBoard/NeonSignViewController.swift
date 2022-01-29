@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NeonSignViewController.swift
 //  NeonSignBoard
 //
 //  Created by JunHeeJo on 1/29/22.
@@ -7,13 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NeonSignViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
