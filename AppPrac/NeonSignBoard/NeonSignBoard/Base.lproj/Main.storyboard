@@ -53,6 +53,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4kq-oM-T3F"/>
+                    <connections>
+                        <outlet property="textLabel" destination="qUI-oh-q3p" id="VoG-0h-Lri"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,6 +190,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TKp-4H-TBj"/>
+                    <connections>
+                        <outlet property="backgroundColorWell" destination="xnE-Mj-TEY" id="hOG-cB-Dsp"/>
+                        <outlet property="textColorWell" destination="dJn-tW-If1" id="51T-Hs-APg"/>
+                        <outlet property="textSizeSlider" destination="Piy-6h-mEx" id="YMW-sq-ysp"/>
+                        <outlet property="textView" destination="Go3-UF-3pV" id="tA2-ge-v7E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TQz-w0-7ul" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
