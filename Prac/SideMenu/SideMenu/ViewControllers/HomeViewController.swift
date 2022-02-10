@@ -11,17 +11,21 @@ protocol HomeViewControllerDelegate: AnyObject {
     func didTapMenuButton()
 }
 
-
 class HomeViewController: UIViewController {
-    
+    // MARK: Properties
     weak var delegate: HomeViewControllerDelegate?
     
-    @IBAction func tapMenuButton(_ sender: Any) {
-        delegate?.didTapMenuButton()
-    }
-
+    // MARK: @IBOutlet
+    @IBOutlet weak var textLabel: UILabel!
+    
+    // MARK: VCLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    // MARK: @IBAction
+    @IBAction func tapMenuButton(_ sender: Any) {
+        delegate?.didTapMenuButton()
     }
 }
