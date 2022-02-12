@@ -34,7 +34,6 @@ class ContainerViewController: UIViewController {
         return nav
     }()
     lazy var homeVC: HomeViewController = homeNavC.topViewController as? HomeViewController ?? HomeViewController()
-    lazy var settingsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController")
     
     // MARK: VCLifeCycle
     override func viewDidLoad() {
@@ -68,12 +67,12 @@ class ContainerViewController: UIViewController {
 extension ContainerViewController: MenuViewControllerDelegate {
     func didSelect(_ vc: MenuViewController, mainMenu: MenuViewController.MenuOptions) {
         switch mainMenu {
-        case .Home:
+        case .home:
             resetToHome()
             homeNavC.popToRootViewController(animated: true)
-        case .Settings:
+        case .settings:
             performSegue(mainMenu: mainMenu.rawValue)
-        case .Trash:
+        case .trash:
             performSegue(mainMenu: mainMenu.rawValue)
         }
         toggleMenu(completion: nil)

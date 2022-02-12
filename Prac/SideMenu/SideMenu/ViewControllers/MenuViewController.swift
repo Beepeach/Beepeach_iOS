@@ -17,9 +17,9 @@ protocol MenuViewControllerDelegate: AnyObject {
 class MenuViewController: UIViewController {
     // MARK: Enum
     enum MenuOptions: String, CaseIterable {
-        case Home
-        case Trash
-        case Settings
+        case home = "Home"
+        case trash = "Trash"
+        case settings = "Settings"
     }
     
     // MARK: Properties
@@ -37,13 +37,13 @@ class MenuViewController: UIViewController {
     
     // MARK: @IBActions
     @IBAction func tapHome(_ sender: UIButton) {
-        delegate?.didSelect(self, mainMenu: .Home)
+        delegate?.didSelect(self, mainMenu: .home)
     }
     @IBAction func tapTrash(_ sender: UIButton) {
-        delegate?.didSelect(self, mainMenu: .Trash)
+        delegate?.didSelect(self, mainMenu: .trash)
     }
     @IBAction func tapSettings(_ sender: UIButton) {
-        delegate?.didSelect(self, mainMenu: .Settings)
+        delegate?.didSelect(self, mainMenu: .settings)
     }
 }
 
