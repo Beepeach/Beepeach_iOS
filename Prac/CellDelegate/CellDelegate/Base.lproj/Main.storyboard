@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CellDelegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C6y-HA-uHh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OzH-1Q-cce">
+                                    <size key="itemSize" width="320" height="161"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCollectionViewCell" id="eUO-ch-vrR" customClass="CustomCollectionViewCell" customModule="CellDelegate" customModuleProvider="target">
+                                        <rect key="frame" x="47" y="0.0" width="320" height="161"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zdj-da-adO">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="161"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="return을 누르면 아래 textField로 이동" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5W-NT-P0v" customClass="CustomTextField" customModule="CellDelegate" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="5" width="280" height="115"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="eUO-ch-vrR" id="afr-qb-Nbj"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text를 동적으로 업데이트" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PI-6y-JBa">
+                                                    <rect key="frame" x="20" y="130" width="280" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="y5W-NT-P0v" firstAttribute="leading" secondItem="Zdj-da-adO" secondAttribute="leading" constant="20" id="ECe-Vu-uTZ"/>
+                                                <constraint firstItem="y5W-NT-P0v" firstAttribute="top" secondItem="Zdj-da-adO" secondAttribute="top" constant="5" id="Fts-YD-7Zl"/>
+                                                <constraint firstAttribute="bottom" secondItem="4PI-6y-JBa" secondAttribute="bottom" constant="10" id="coX-up-jFQ"/>
+                                                <constraint firstItem="4PI-6y-JBa" firstAttribute="trailing" secondItem="y5W-NT-P0v" secondAttribute="trailing" id="kC9-5T-SZ9"/>
+                                                <constraint firstItem="4PI-6y-JBa" firstAttribute="leading" secondItem="y5W-NT-P0v" secondAttribute="leading" id="qsI-cQ-pcC"/>
+                                                <constraint firstItem="4PI-6y-JBa" firstAttribute="top" secondItem="y5W-NT-P0v" secondAttribute="bottom" constant="10" id="w9w-nt-N3t"/>
+                                                <constraint firstAttribute="trailing" secondItem="y5W-NT-P0v" secondAttribute="trailing" constant="20" id="wRv-3E-L54"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <size key="customSize" width="320" height="161"/>
+                                        <connections>
+                                            <outlet property="firstTextField" destination="y5W-NT-P0v" id="fHe-oy-5eu"/>
+                                            <outlet property="textLabel" destination="4PI-6y-JBa" id="lUw-KJ-Veo"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Delegate를 통해서 여기로 이동" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vx3-zr-aO6">
+                                <rect key="frame" x="104" y="431" width="206.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="C6y-HA-uHh" secondAttribute="bottom" id="AW8-2D-F3b"/>
+                            <constraint firstItem="C6y-HA-uHh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LOS-KW-lqV"/>
+                            <constraint firstItem="C6y-HA-uHh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="T15-N6-95W"/>
+                            <constraint firstItem="vx3-zr-aO6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f5u-Eb-pb7"/>
+                            <constraint firstItem="vx3-zr-aO6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yir-Rx-Hwv"/>
+                            <constraint firstItem="C6y-HA-uHh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zwq-2J-djM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="listCollectionView" destination="C6y-HA-uHh" id="2ob-n6-0Xn"/>
+                        <outlet property="secondTextField" destination="vx3-zr-aO6" id="Drf-co-uTE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
