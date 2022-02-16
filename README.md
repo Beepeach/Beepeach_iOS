@@ -5,7 +5,7 @@
 <br/><br/><br/>
 
 ***
-### Prac
+### ⚙️Prac
 + [CellDelegate](https://github.com/Beepeach/Beepeach_iOS/tree/main/Prac/CellDelegate)
 + [ScrollView](https://github.com/Beepeach/Beepeach_iOS/tree/main/Prac/ScrollView)
 + [SideMenu](https://github.com/Beepeach/Beepeach_iOS/tree/main/Prac/SideMenu)
@@ -13,7 +13,7 @@
 + [CAGradientLayer](https://github.com/Beepeach/Beepeach_iOS/tree/main/Prac/CAGradientLayer)
 <br/><br/><br/><br/>
 ***
-### App Prac
+### 📱App Prac
 + [CustomCalendar](https://github.com/Beepeach/Beepeach_iOS/tree/main/AppPrac/CustomCalendar)
 + [NeonsignBoard](https://github.com/Beepeach/Beepeach_iOS/tree/main/AppPrac/NeonSignBoard)
 + [MVC Basic](https://github.com/Beepeach/Beepeach_iOS/tree/main/AppPrac/MVCBasic)
