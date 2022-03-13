@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         return label
     }()
-    
+
     let afterLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 30, weight: .semibold)
         $0.textColor = .systemRed
