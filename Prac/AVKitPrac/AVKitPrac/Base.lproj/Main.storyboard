@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AVKitPrac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q6s-7r-2nx">
+                                <rect key="frame" x="0.0" y="59" width="393" height="367"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4a-Um-rvo">
+                                <rect key="frame" x="0.0" y="59" width="393" height="367"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="tapThumnail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7GH-kg-qEu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfb-bF-9oc">
+                                <rect key="frame" x="119" y="556" width="155" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Download to disk"/>
+                                <connections>
+                                    <action selector="downloadToDisk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xis-ie-GmA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="z4a-Um-rvo" firstAttribute="bottom" secondItem="Q6s-7r-2nx" secondAttribute="bottom" id="GB7-Cl-W9O"/>
+                            <constraint firstItem="Q6s-7r-2nx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Roq-ed-kmm"/>
+                            <constraint firstAttribute="centerY" secondItem="Q6s-7r-2nx" secondAttribute="bottom" id="Yo1-Ru-ubP"/>
+                            <constraint firstItem="z4a-Um-rvo" firstAttribute="trailing" secondItem="Q6s-7r-2nx" secondAttribute="trailing" id="dkK-gs-wrw"/>
+                            <constraint firstItem="Mfb-bF-9oc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gkN-9B-Cjd"/>
+                            <constraint firstItem="Q6s-7r-2nx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jFg-a0-WLZ"/>
+                            <constraint firstItem="z4a-Um-rvo" firstAttribute="leading" secondItem="Q6s-7r-2nx" secondAttribute="leading" id="k0T-x6-vX7"/>
+                            <constraint firstItem="z4a-Um-rvo" firstAttribute="top" secondItem="Q6s-7r-2nx" secondAttribute="top" id="qSD-To-WAn"/>
+                            <constraint firstItem="Mfb-bF-9oc" firstAttribute="top" secondItem="Q6s-7r-2nx" secondAttribute="bottom" constant="130" id="shm-uB-fNE"/>
+                            <constraint firstAttribute="trailing" secondItem="Q6s-7r-2nx" secondAttribute="trailing" id="szJ-34-hRI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="thumbnailView" destination="Q6s-7r-2nx" id="ONY-fa-LXg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
