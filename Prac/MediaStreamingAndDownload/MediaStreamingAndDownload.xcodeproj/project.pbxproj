@@ -12,6 +12,7 @@
 		EEF7BAF829C6EDE300DDE84A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF7BAF629C6EDE300DDE84A /* Main.storyboard */; };
 		EEF7BAFA29C6EDE400DDE84A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEF7BAF929C6EDE400DDE84A /* Assets.xcassets */; };
 		EEF7BAFD29C6EDE400DDE84A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF7BAFB29C6EDE400DDE84A /* LaunchScreen.storyboard */; };
+		EEF7BB0529C6F01B00DDE84A /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF7BB0429C6F01B00DDE84A /* MediaTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EEF7BAF929C6EDE400DDE84A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEF7BAFC29C6EDE400DDE84A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEF7BAFE29C6EDE400DDE84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEF7BB0429C6F01B00DDE84A /* MediaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				EEF7BAF029C6EDE300DDE84A /* AppDelegate.swift */,
 				EEF7BAF429C6EDE300DDE84A /* ViewController.swift */,
+				EEF7BB0429C6F01B00DDE84A /* MediaTableViewCell.swift */,
 				EEF7BAF629C6EDE300DDE84A /* Main.storyboard */,
 				EEF7BAF929C6EDE400DDE84A /* Assets.xcassets */,
 				EEF7BAFB29C6EDE400DDE84A /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF7BAF529C6EDE300DDE84A /* ViewController.swift in Sources */,
+				EEF7BB0529C6F01B00DDE84A /* MediaTableViewCell.swift in Sources */,
 				EEF7BAF129C6EDE300DDE84A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

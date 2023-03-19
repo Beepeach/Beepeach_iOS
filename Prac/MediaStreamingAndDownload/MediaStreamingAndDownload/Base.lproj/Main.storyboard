@@ -20,8 +20,17 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ybp-un-D1H">
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gOc-aw-IAF">
+                                    <rect key="frame" x="0.0" y="384" width="393" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Remove All Cache"/>
+                                    <connections>
+                                        <action selector="removeAllCache:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VpZ-y2-Er9"/>
+                                    </connections>
+                                </button>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="306" id="toI-QT-gNh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaTableViewCell" rowHeight="306" id="toI-QT-gNh" customClass="MediaTableViewCell" customModule="MediaStreamingAndDownload" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="306"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="toI-QT-gNh" id="e8q-UD-8bO">
@@ -29,10 +38,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xMl-tW-35O">
-                                                    <rect key="frame" x="20" y="11" width="353" height="263.66666666666669"/>
+                                                    <rect key="frame" x="20" y="11" width="353" height="233.66666666666666"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAj-4i-Xbb">
-                                                    <rect key="frame" x="20" y="289.66666666666669" width="353" height="20.333333333333314"/>
+                                                    <rect key="frame" x="20" y="259.66666666666669" width="353" height="20.333333333333314"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -43,13 +52,21 @@
                                                 <constraint firstItem="xMl-tW-35O" firstAttribute="top" secondItem="e8q-UD-8bO" secondAttribute="topMargin" id="PHG-eF-3XI"/>
                                                 <constraint firstItem="ZAj-4i-Xbb" firstAttribute="top" secondItem="xMl-tW-35O" secondAttribute="bottom" constant="15" id="Qs6-Yx-GKC"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="xMl-tW-35O" secondAttribute="trailing" id="T0k-54-uYU"/>
-                                                <constraint firstItem="ZAj-4i-Xbb" firstAttribute="bottom" secondItem="e8q-UD-8bO" secondAttribute="bottomMargin" constant="15" id="XBo-6c-ZN0"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZAj-4i-Xbb" secondAttribute="bottom" constant="15" id="XBo-6c-ZN0"/>
                                                 <constraint firstItem="ZAj-4i-Xbb" firstAttribute="trailing" secondItem="e8q-UD-8bO" secondAttribute="trailingMargin" id="aMh-Qc-dij"/>
                                                 <constraint firstItem="xMl-tW-35O" firstAttribute="leading" secondItem="e8q-UD-8bO" secondAttribute="leadingMargin" id="hrT-wa-nsW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="thumbnailImageView" destination="xMl-tW-35O" id="XPP-a6-fPZ"/>
+                                            <outlet property="titleLabel" destination="ZAj-4i-Xbb" id="hNe-hP-tRy"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XoD-aB-eDr"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="AqH-WW-eHs"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
