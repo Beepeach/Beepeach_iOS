@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		465ED85129C81D8A00C8E4A0 /* ThumbnailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465ED85029C81D8A00C8E4A0 /* ThumbnailGenerator.swift */; };
 		EEF7BAF129C6EDE300DDE84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF7BAF029C6EDE300DDE84A /* AppDelegate.swift */; };
 		EEF7BAF529C6EDE300DDE84A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF7BAF429C6EDE300DDE84A /* ViewController.swift */; };
 		EEF7BAF829C6EDE300DDE84A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF7BAF629C6EDE300DDE84A /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		465ED85029C81D8A00C8E4A0 /* ThumbnailGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailGenerator.swift; sourceTree = "<group>"; };
 		EEF7BAED29C6EDE300DDE84A /* MediaStreamingAndDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaStreamingAndDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF7BAF029C6EDE300DDE84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEF7BAF429C6EDE300DDE84A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				EEF7BB0729C6F2D900DDE84A /* VideoThumbnailRepository.swift */,
+				465ED85029C81D8A00C8E4A0 /* ThumbnailGenerator.swift */,
 			);
 			path = VideoThumbnailRepository;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			files = (
 				EEF7BAF529C6EDE300DDE84A /* ViewController.swift in Sources */,
 				EEF7BB0529C6F01B00DDE84A /* MediaTableViewCell.swift in Sources */,
+				465ED85129C81D8A00C8E4A0 /* ThumbnailGenerator.swift in Sources */,
 				EEF7BB0829C6F2D900DDE84A /* VideoThumbnailRepository.swift in Sources */,
 				EEF7BAF129C6EDE300DDE84A /* AppDelegate.swift in Sources */,
 			);
